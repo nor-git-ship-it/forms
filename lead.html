@@ -1,0 +1,1761 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead</title>
+    <meta name="referrer" content="never">
+    <meta type="xrm/designer/setting" name="type" value="marketing-designer-content-editor-document">
+    <meta type="xrm/designer/setting" name="layout-editable" value="marketing-designer-layout-editable">
+    <style>
+        .editor-control-layout html {
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        .editor-control-layout *,
+        .editor-control-layout *:before,
+        .editor-control-layout *:after {
+            box-sizing: inherit;
+        }
+
+        .marketingForm h1 {
+            color: #000;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.25;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .marketingForm h2 {
+            color: #333;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            line-height: 1.25;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .marketingForm h3 {
+            color: #000;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            line-height: 1.25;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .marketingForm p {
+            margin: 0px;
+            padding: 0px;
+            line-height: 125%;
+            line-height: 1.25;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .marketingForm a,
+        div[data-editorblocktype="Captcha"] td:nth-of-type(2) a {
+            text-decoration: none;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .marketingForm .primaryButtonWrapper,
+        .submitButtonWrapper {
+            text-align: center;
+            margin: 10px 0px;
+        }
+
+        .marketingForm .primaryButton,
+        .submitButton {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            background-color: #2266e3;
+            border: none;
+            border-radius: 4px;
+            color: #ffffff;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .marketingForm .secondaryButton {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            background-color: #ffffff;
+            border: 1px solid #0082dd;
+            border-radius: 4px;
+            color: #2266e3;
+            padding: 10px 20px;
+            margin: 0px;
+            cursor: pointer;
+        }
+
+        .marketingForm .error {
+            font-family: Arial, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 8px;
+            margin: 0px;
+            padding: 0px;
+            color: #a80000;
+        }
+
+        .zero-state-container span {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 26px;
+            color: #242424;
+        }
+
+        form.marketingForm {
+            color: #000;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        [data-layout="true"] {
+            margin: 0 auto;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        div[data-editorblocktype="SubmitButton"] {
+            padding: 20px 12%;
+        }
+
+        div[data-editorblocktype="Captcha"] {
+            padding: 20px 12%;
+        }
+
+        div[data-editorblocktype="Captcha"] table,
+        div[data-editorblocktype="Captcha"] div>table>tbody>tr>td:nth-of-type(2) {
+            width: 100% !important;
+        }
+
+        div[data-editorblocktype="Captcha"] div>div>table>tbody>tr:first-of-type>td:last-of-type {
+            padding-bottom: 12px !important;
+        }
+
+        div[data-editorblocktype="Captcha"] tr[id="wlspispHIPErrorContainer"] {
+            margin-top: 20px;
+        }
+
+        div[data-editorblocktype="Captcha"] tr[id="wlspispHIPErrorContainer"] td:nth-of-type(2) {
+            width: auto !important;
+        }
+
+        div[data-editorblocktype="Captcha"] tr[id="wlspispHIPErrorContainer"] img {
+            display: flex;
+        }
+
+        div[data-editorblocktype="Captcha"] td:nth-of-type(2)>div>div {
+            margin-top: 4px;
+        }
+
+        div[data-editorblocktype="Captcha"] td:nth-of-type(2)>div>div * {
+            font-weight: 400;
+        }
+
+        div[data-editorblocktype="Captcha"] td:nth-of-type(2)>div>div b {
+            color: #797775;
+        }
+
+        div[data-editorblocktype="Captcha"] tr:nth-of-type(2)>td {
+            height: 0px !important;
+        }
+
+        div[data-editorblocktype="Captcha"] td input {
+            margin-top: 20px !important;
+            padding: 6px 8px !important;
+            width: 100% !important;
+        }
+
+        div[data-editorblocktype="Captcha"] div[id^="wlspaudioBtnHolder"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div[data-editorblocktype="About"],
+        div[data-editorblocktype="Sessions"],
+        div[data-editorblocktype="Speakers"] {
+            padding: 32px 24px;
+        }
+
+        div[data-editorblocktype="Sessions"] h2 {
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .textFormFieldBlock,
+        .dateTimeFormFieldBlock,
+        .twoOptionFormFieldBlock,
+        .optionSetFormFieldBlock,
+        .passesBlock,
+        .multiOptionSetFormFieldBlock,
+        .lookupFormFieldBlock {
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        table.multi .textFormFieldBlock,
+        table.multi .dateTimeFormFieldBlock,
+        table.multi .twoOptionFormFieldBlock,
+        table.multi .optionSetFormFieldBlock,
+        table.multi .passesBlock,
+        table.multi .multiOptionSetFormFieldBlock,
+        table.multi .lookupFormFieldBlock {
+            padding: 12px 20px;
+        }
+
+        .consentBlock {
+            padding: 4px 30px;
+        }
+
+        .textFormFieldBlock label,
+        .dateTimeFormFieldBlock label,
+        .lookupFormFieldBlock label,
+        .twoOptionFormFieldBlock label.block-label,
+        .optionSetFormFieldBlock label.block-label,
+        .multiOptionSetFormFieldBlock label.block-label,
+        div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"],
+        .textFormFieldBlock label *,
+        .dateTimeFormFieldBlock label *,
+        .lookupFormFieldBlock label *,
+        .twoOptionFormFieldBlock label.block-label *,
+        .optionSetFormFieldBlock label.block-label *,
+        .multiOptionSetFormFieldBlock label.block-label *,
+        .consentBlock label p,
+        .passesBlock label {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #323130;
+        }
+
+        .textFormFieldBlock label,
+        .dateTimeFormFieldBlock label,
+        .lookupFormFieldBlock label,
+        .twoOptionFormFieldBlock label.block-label,
+        .optionSetFormFieldBlock label.block-label,
+        .multiOptionSetFormFieldBlock label.block-label,
+        .passesBlock label,
+        div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"] {
+            display: inline-block;
+            margin-top: 4px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            padding: 0px;
+            flex: 1;
+            width: 100%;
+        }
+
+        .textFormFieldBlock label>*,
+        .dateTimeFormFieldBlock label>*,
+        .lookupFormFieldBlock label>*,
+        .twoOptionFormFieldBlock label.block-label>*,
+        .optionSetFormFieldBlock label.block-label>*,
+        .multiOptionSetFormFieldBlock label.block-label>*,
+        .passesBlock label.block-label>*,
+        .consentBlock label>* {
+            display: inline-block;
+        }
+
+        .textFormFieldBlock label::after,
+        .twooption_checkbox label::after,
+        .dateTimeFormFieldBlock label::after,
+        .lookupFormFieldBlock label::after,
+        .twoOptionFormFieldBlock label.block-label::after,
+        .twoOptionFormFieldBlock div.twooption_checkbox label::after,
+        .optionSetFormFieldBlock label.block-label::after,
+        .passesBlock label.block-label::after,
+        .multiOptionSetFormFieldBlock label.block-label::after,
+        .consentBlock label::after,
+        .eventSession label::after,
+        div[data-editorblocktype="Sessions"] h2::after,
+        div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"]::after {
+            width: 22px;
+            display: inline-block;
+            line-height: 22px;
+            text-align: center;
+            color: #c33400;
+            content: "*";
+            visibility: hidden;
+        }
+
+        div[data-required].textFormFieldBlock label::after,
+        div[data-required].dateTimeFormFieldBlock label::after,
+        div[data-required].lookupFormFieldBlock label::after,
+        div[data-required] div.twooption_checkbox label::after,
+        div[data-required] label.block-label::after,
+        div[data-required="true"].consentBlock label::after,
+        div[data-editorblocktype="Sessions"][data-required="true"i] h2::after,
+        div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"]::after {
+            visibility: visible;
+        }
+
+        .eventSessions div.eventSession div input[type="checkbox"]:checked+label::after,
+        .eventSessions div.eventSession div input[type="radio"]:checked+label::after {
+            visibility: visible;
+        }
+
+        .optionSetFormFieldBlock select,
+        .textFormFieldBlock input,
+        .dateTimeFormFieldBlock input,
+        .lookupFormFieldBlock input,
+        .marketingForm textarea,
+        div[data-editorblocktype="Captcha"] input,
+        .passesBlock select {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 14px;
+            padding: 6px 8px;
+            background-color: #faf9f8;
+            border: 1px solid #e1dfdd;
+            border-radius: 2px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            font-size: 14px;
+            flex: 2 1 20%;
+        }
+
+        .optionSetFormFieldBlock select,
+        .textFormFieldBlock input::placeholder,
+        .dateTimeFormFieldBlock input,
+        .lookupFormFieldBlock input::placeholder,
+        .marketingForm textarea::placeholder,
+        .passesBlock select,
+        div[data-editorblocktype="Captcha"] input::placeholder {}
+
+        .textFormFieldBlock textArea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .lookupFormFieldBlock input {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiPjxwYXRoIGQ9Ik0xMzQ0IDBxOTcgMCAxODcgMjV0MTY4IDcxIDE0MiAxMTAgMTExIDE0MyA3MSAxNjggMjUgMTg3cTAgOTctMjUgMTg3dC03MSAxNjgtMTEwIDE0Mi0xNDMgMTExLTE2OCA3MS0xODcgMjVxLTEyNSAwLTIzOS00MnQtMjExLTEyMWwtNzg1IDc4NHEtMTkgMTktNDUgMTl0LTQ1LTE5LTE5LTQ1cTAtMjYgMTktNDVsNzg0LTc4NXEtNzktOTYtMTIxLTIxMHQtNDItMjQwcTAtOTcgMjUtMTg3dDcxLTE2OCAxMTAtMTQyVDk4OSA5NnQxNjgtNzEgMTg3LTI1em0wIDEyODBxMTE5IDAgMjI0LTQ1dDE4My0xMjQgMTIzLTE4MyA0Ni0yMjRxMC0xMTktNDUtMjI0dC0xMjQtMTgzLTE4My0xMjMtMjI0LTQ2cS0xMTkgMC0yMjQgNDVUOTM3IDI5NyA4MTQgNDgwdC00NiAyMjRxMCAxMTkgNDUgMjI0dDEyNCAxODMgMTgzIDEyMyAyMjQgNDZ6Ii8+PC9zdmc+);
+            background-repeat: no-repeat;
+            background-position-x: 98%;
+            background-position-y: center;
+            background-size: 1em 1em;
+        }
+
+        .lookupFormFieldBlock input:dir(rtl) {
+            background-position-x: 2%;
+        }
+
+        .optionSetFormFieldBlock select,
+        .passesBlock select {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDEyIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02IDYuNzA4OThMMC4xNDY0ODQgMC44NTU0NjlMMC44NTU0NjkgMC4xNDY0ODRMNiA1LjI5MTAyTDExLjE0NDUgMC4xNDY0ODRMMTEuODUzNSAwLjg1NTQ2OUw2IDYuNzA4OThaIiBmaWxsPSIjNjA1RTVDIi8+Cjwvc3ZnPgo=);
+            background-repeat: no-repeat;
+            background-position-x: 98%;
+            background-position-y: center;
+            appearance: none;
+        }
+
+        .optionSetFormFieldBlock select option,
+        .passesBlock select option {
+            background-color: #faf9f8;
+        }
+
+        .passesBlock fieldset {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 1fr;
+            border: none;
+            padding: 0px;
+        }
+
+        .passesBlock fieldset input {
+            display: none;
+        }
+
+        .passesBlock fieldset label {
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 2px 0px, rgba(0, 0, 0, 0.14) 0px 2px 4px 0px;
+            border-radius: 4px;
+            padding: 16px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .passesBlock fieldset label .passName {
+            font-weight: 600;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+        }
+
+        .passesBlock fieldset label .passPrice {
+            font-size: 12px;
+            color: rgba(97, 97, 97, 1);
+            margin-bottom: 16px;
+        }
+
+        .passesBlock fieldset label .passDescription {
+            font-size: 12px;
+            color: rgba(66, 66, 66, 1);
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5;
+            overflow: hidden;
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons,
+        .twoOptionFormFieldBlock div.twooption_checkbox,
+        .optionSetFormFieldBlock div.radiobuttons,
+        .multiOptionSetFormFieldBlock fieldset {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 14px;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 8px;
+            flex: 2;
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons,
+        .optionSetFormFieldBlock div.radiobuttons,
+        .multiOptionSetFormFieldBlock fieldset {
+            margin-top: 16px;
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons>div,
+        .twoOptionFormFieldBlock div.twooption_checkbox>div,
+        .optionSetFormFieldBlock div.radiobuttons>div,
+        .multiOptionSetFormFieldBlock fieldset>div,
+        .consentBlock>div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 8px;
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons div label,
+        .optionSetFormFieldBlock div.radiobuttons div label {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .twoOptionFormFieldBlock div.twooption_checkbox div label,
+        .twoOptionFormFieldBlock div.twooption_checkbox div label div,
+        .consentBlock div label p {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .eventSessions div.eventSession div label,
+        .eventSessions div.eventSession div label div {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+        }
+
+        .multiOptionSetFormFieldBlock fieldset>div>label {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .optionSetFormFieldBlock div.radiobuttons div input[type="radio"]:checked+label,
+        .twoOptionFormFieldBlock div.radiobuttons div input[type="radio"]:checked+label {}
+
+        .twoOptionFormFieldBlock div.twooption_checkbox div input[type="checkbox"]:checked+label,
+        .twoOptionFormFieldBlock div.twooption_checkbox div input[type="checkbox"]:checked+label div,
+        .consentBlock div input[type="checkbox"]:checked+label p {}
+
+        .eventSessions div.eventSession div input[type="checkbox"]:checked+label,
+        .eventSessions div.eventSession div input[type="checkbox"]:checked+label div,
+        .eventSessions div.eventSession div input[type="radio"]:checked+label,
+        .eventSessions div.eventSession div input[type="radio"]:checked+label div {
+            text-decoration: none;
+            font-weight: 400;
+            color: #000;
+        }
+
+        .passesBlock input:checked+label {
+            border: 1px solid #0078d4;
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons,
+        .optionSetFormFieldBlock div.radiobuttons {
+            padding: 0px;
+            margin: 0px;
+            border-radius: 0px;
+            background-color: transparent;
+        }
+
+        .twoOptionFormFieldBlock div.twooption_checkbox>div,
+        .consentBlock>div {
+            width: 100%;
+            border-radius: 0px;
+            background-color: transparent;
+        }
+
+        .eventSessions div.eventSession>div {
+            width: 100%;
+            border-radius: 0px;
+            background-color: transparent;
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons div,
+        .optionSetFormFieldBlock div.radiobuttons div {
+            width: 100%;
+        }
+
+        .twoOptionFormFieldBlock div.twooption_checkbox div,
+        .consentBlock div {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .eventSessions div.eventSession div {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        div[data-editorblocktype="Sessions"] .eventSessions div.eventSession {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 16px;
+        }
+
+        .eventSessions div.eventSession div.eventSessionDescription>p:not(:first-child) {
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .eventSessions div.eventSession div.eventSessionDescription p .sessionFullMessage {
+            color: #bf0077;
+        }
+
+        .eventSessions div.eventSession div.eventSessionDescription p .sessionWaitlistMessage {
+            color: #707070;
+        }
+
+        .eventSessions div.eventSession:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        .eventSessions div.eventSession div.eventSessionInput {
+            flex: 0;
+        }
+
+        .eventSessions div.eventSession div.eventSessionDescription {
+            flex: 1;
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons div input,
+        .twoOptionFormFieldBlock div.twooption_checkbox div input,
+        .optionSetFormFieldBlock div.radiobuttons div input,
+        .multiOptionSetFormFieldBlock fieldset>div>input[type="checkbox"],
+        .eventSession>div>input[type="checkbox"],
+        .eventSession>div>input[type="radio"],
+        .consentBlock div input {
+            margin: 0px;
+            box-sizing: border-box;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #323130;
+            border-radius: 2px;
+            accent-color: #0078d4;
+            flex-shrink: 0;
+        }
+
+        .eventSessions {
+            font-size: 16px;
+            line-height: 1.2;
+            border: none;
+        }
+
+        .eventSession label b {
+            display: inline;
+        }
+
+        .marketingForm [dir="rtl"],
+        .marketingForm [dir="rtl"] * {
+            text-align: right;
+        }
+
+        .marketingForm s span {
+            text-decoration: line-through;
+        }
+
+        .marketingForm u span {
+            text-decoration: underline;
+        }
+
+        .dividerWrapper p span {
+            line-height: 0px;
+        }
+
+        .marketingForm ul,
+        .marketingForm ol {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            line-height: 125%;
+            line-height: 1.25;
+            padding-inline-end: 0px !important;
+        }
+
+        .marketingForm p img {
+            max-width: 100%;
+        }
+
+        .marketingForm u a {
+            text-decoration: underline;
+        }
+
+        .marketingForm .imageWrapper a img {
+            text-decoration: none;
+            border: 0px;
+        }
+
+        .marketingForm th.columnContainer,
+        .marketingForm th.inner {
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .marketingForm [dir="rtl"] th.columnContainer,
+        .marketingForm [dir="rtl"] th.inner {
+            font-weight: normal;
+            text-align: right;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .marketingForm a span {
+                line-height: inherit !important;
+            }
+
+            .marketingForm .multi table {
+                table-layout: fixed;
+                height: auto !important;
+            }
+
+            .marketingForm .multi td {
+                width: auto !important;
+                min-height: auto !important;
+            }
+
+            .marketingForm .multi tbody,
+            .marketingForm .multi tbody tr,
+            .marketingForm .multi tbody tr td,
+            .marketingForm .multi tbody tr th,
+            .marketingForm .outer tbody,
+            .marketingForm .outer tbody tr,
+            .marketingForm .outer tbody tr td,
+            .marketingForm .outer tbody tr th {
+                display: block;
+                box-sizing: border-box;
+                height: auto !important;
+                min-height: auto !important;
+            }
+
+            .marketingForm .wrap-section .multi tbody,
+            .marketingForm .wrap-section .multi tbody tr,
+            .marketingForm .wrap-section .multi tbody tr td,
+            .marketingForm .wrap-section .multi tbody tr th,
+            .marketingForm .wrap-section .outer tbody,
+            .marketingForm .wrap-section .outer tbody tr,
+            .marketingForm .wrap-section .outer tbody tr td,
+            .marketingForm .wrap-section .outer tbody tr th {
+                width: 100% !important;
+            }
+
+            .marketingForm .multi .inner {
+                height: auto !important;
+                min-height: auto !important;
+            }
+
+            .marketingForm .tbContainer .inner {
+                box-sizing: border-box;
+            }
+
+            .marketingForm .outer {
+                width: 100% !important;
+            }
+
+            .marketingForm .tbContainer .columnContainer table {
+                table-layout: fixed !important;
+            }
+
+            .marketingForm .innerTable {
+                min-height: auto !important;
+            }
+
+            .marketingForm .no-wrap-section .outer {
+                display: table !important;
+            }
+
+            .marketingForm .no-wrap-section .multi table {
+                height: 100% !important;
+            }
+
+            .marketingForm .no-wrap-section .multi tbody,
+            .marketingForm .no-wrap-section .outer tbody {
+                display: table-row-group !important;
+                width: 100% !important;
+            }
+
+            .marketingForm .no-wrap-section .multi tbody tr,
+            .marketingForm .no-wrap-section .outer tbody tr {
+                display: table-row !important;
+                width: 100% !important;
+            }
+
+            .marketingForm .no-wrap-section .multi tbody tr td,
+            .marketingForm .no-wrap-section .multi tbody tr th,
+            .marketingForm .no-wrap-section .outer tbody tr td,
+            .marketingForm .no-wrap-section .outer tbody tr th {
+                display: table-cell !important;
+            }
+
+            .marketingForm .no-wrap-section.columns-equal-class .outer tbody tr td,
+            .marketingForm .no-wrap-section.columns-equal-class .outer tbody tr th {
+                height: 0px !important;
+            }
+
+            .marketingForm .no-wrap-section .outer tbody tr td.inner,
+            .marketingForm .no-wrap-section .outer tbody tr th.inner {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .marketingForm a[x-apple-data-detectors] {
+                color: inherit !important;
+                text-decoration: none !important;
+                font-size: inherit !important;
+                font-family: inherit !important;
+                font-weight: inherit !important;
+                line-height: inherit !important;
+            }
+        }
+
+        .notification-container {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .notification-message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 38px;
+            border: 1.44737px solid#CCCCCC;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .notification-message-hide {
+            display: none;
+        }
+
+        .phoneFormFieldBlock {
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        table.multi .phoneFormFieldBlock {
+            padding: 12px 20px;
+        }
+
+        .phoneFormFieldBlock label,
+        .phoneFormFieldBlock label * {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #323130;
+        }
+
+        .phoneFormFieldBlock label {
+            display: inline-block;
+            margin-top: 4px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            padding: 0px;
+            flex: 1;
+            width: 100%;
+        }
+
+        .phoneFormFieldBlock label>* {
+            display: inline-block;
+        }
+
+        .phoneFormFieldBlock label::after {
+            width: 22px;
+            display: inline-block;
+            line-height: 22px;
+            text-align: center;
+            color: #c33400;
+            content: "*";
+            visibility: hidden;
+        }
+
+        div[data-required].phoneFormFieldBlock label::after {
+            visibility: visible;
+        }
+
+        .phoneFormFieldBlock input::placeholder {}
+
+        .phoneFormFieldBlock .phoneCountryCode {
+            display: flex;
+            flex: 2 1 20%;
+            align-items: center;
+            flex-direction: row;
+            box-sizing: border-box;
+            border: 1px solid #e1dfdd;
+            border-radius: 2px;
+            justify-content: center;
+            background-color: transparent;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        .phoneFormFieldBlock .phoneCountryCodeLabel {
+            overflow: hidden;
+            margin: 0;
+            cursor: pointer;
+            padding-left: 5px;
+            padding-right: 5px;
+            opacity: 1;
+            text-align: center;
+            color: #605e5c;
+            background-color: #f3f2f1;
+            align-items: center;
+            align-self: stretch;
+            display: flex;
+        }
+
+        .phoneFormFieldBlock span[hidden] {
+            display: none;
+        }
+
+        .phoneFormFieldBlock input {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 14px;
+            padding: 6px 8px;
+            background-color: #faf9f8;
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            font-size: 14px;
+            flex: 2;
+
+            border: none;
+        }
+    </style>
+</head>
+
+
+<body dir="ltr">
+   <script>
+	'use strict';
+	console.log("[IP Info] Script loaded");
+	document.addEventListener("DOMContentLoaded", function () {
+		try {
+			var form = document.querySelector("form.marketingForm");
+			if (!form) {
+				console.log("[IP Info] No marketing form found; aborting");
+				return;
+			}
+
+			function setFieldValue(name, value) {
+				if (!name) return;
+				var el = form.querySelector('[name="' + name + '"]');
+				if (!el) {
+					el = document.createElement("input");
+					el.type = "hidden";
+					el.name = name;
+					form.appendChild(el);
+				}
+				el.value = value == null ? "" : String(value);
+				if (name === "IP") {
+					console.log("[IP Info] IP field updated", { isTextarea: el.tagName === "TEXTAREA" });
+				}
+			}
+
+			function joinNonEmpty(arr, sep) {
+				return (Array.isArray(arr) ? arr : []).filter(function (x) { return x != null && String(x).trim().length > 0; }).join(sep);
+			}
+
+			function formatIpData(data) {
+				var entries = [
+					["IP Address", data.ipAddress],
+					["IP Version", data.ipVersion],
+					["Country", joinNonEmpty([data.countryName, data.countryCode], " / ")],
+					["City", data.cityName],
+					["Region", joinNonEmpty([data.regionName, data.regionCode], " / ")],
+					["ZIP Code", data.zipCode],
+					["Continent", joinNonEmpty([data.continent, data.continentCode], " / ")],
+					["Latitude", data.latitude],
+					["Longitude", data.longitude],
+					["ASN", data.asn],
+					["ASN Org", data.asnOrganization],
+					["Proxy", data.isProxy != null ? String(data.isProxy) : ""],
+					["Time Zones", Array.isArray(data.timeZones) ? data.timeZones.join(", ") : ""],
+					["Phone Codes", Array.isArray(data.phoneCodes) ? data.phoneCodes.join(", ") : ""],
+					["Languages", Array.isArray(data.languages) ? data.languages.join(", ") : ""],
+					["Currencies", Array.isArray(data.currencies) ? data.currencies.join(", ") : ""]
+				];
+				var lines = [];
+				entries.forEach(function (pair) {
+					var label = pair[0];
+					var val = pair[1];
+					var str = val == null ? "" : String(val);
+					if (str.trim().length === 0) { return; }
+					lines.push(label);
+					lines.push(str);
+					lines.push("---");
+				});
+				if (lines.length && lines[lines.length - 1] === "---") {
+					lines.pop();
+				}
+				return lines.join("\n");
+			}
+
+			var fields = [
+				"ipinfo_ipAddress",
+				"ipinfo_ipVersion",
+				"ipinfo_countryName",
+				"ipinfo_countryCode",
+				"ipinfo_cityName",
+				"ipinfo_regionName",
+				"ipinfo_regionCode",
+				"ipinfo_zipCode",
+				"ipinfo_continent",
+				"ipinfo_continentCode",
+				"ipinfo_latitude",
+				"ipinfo_longitude",
+				"ipinfo_asn",
+				"ipinfo_asnOrganization",
+				"ipinfo_isProxy",
+				"ipinfo_timeZone",
+				"ipinfo_phoneCode",
+				"ipinfo_language",
+				"ipinfo_currency",
+				"IP",
+				"IP_json"
+			];
+			for (var i = 0; i < fields.length; i++) {
+				setFieldValue(fields[i], "");
+			}
+
+			/**
+			 * Create an AbortSignal with a timeout.
+			 * @param {number} ms
+			 * @returns {AbortSignal}
+			 */
+			function createAbortSignal(ms) {
+				var controller = new AbortController();
+				setTimeout(function () { controller.abort(); }, ms);
+				return controller.signal;
+			}
+
+			/**
+			 * Get requester IP (IPv4 preferred, falls back to IPv6).
+			 * @returns {Promise<string|null>}
+			 */
+			function getIPAddress() {
+				var signal = createAbortSignal(5000);
+				return fetch("https://api4.ipify.org?format=json", { method: "GET", signal: signal })
+					.then(function (res) { return res.ok ? res.json() : Promise.reject(res.status); })
+					.then(function (j) { return (j && typeof j.ip === "string") ? j.ip : null; })
+					.catch(function () {
+						// Fallback to IPv6
+						var signal6 = createAbortSignal(5000);
+						return fetch("https://api6.ipify.org?format=json", { method: "GET", signal: signal6 })
+							.then(function (res) { return res.ok ? res.json() : Promise.reject(res.status); })
+							.then(function (j) { return (j && typeof j.ip === "string") ? j.ip : null; })
+							.catch(function () { return null; });
+					});
+			}
+
+			getIPAddress()
+				.then(function (ip) {
+					var endpoint = ip
+						? "https://free.freeipapi.com/api/json/" + encodeURIComponent(ip)
+						: "https://free.freeipapi.com/api/json/";
+					console.log("[IP Info] Fetching:", endpoint, ip ? "(IP provided)" : "(auto)");
+					return fetch(endpoint, { method: "GET", signal: createAbortSignal(5000) });
+				})
+				.then(function (res) { return res.ok ? res.json() : Promise.reject(res.status); })
+				.then(function (data) {
+					console.log("[IP Info] Received", data);
+					// Store raw JSON separately and present cleaned output in IP field
+					try {
+						setFieldValue("IP_json", JSON.stringify(data));
+					} catch (e) {
+						console.log("[IP Info] JSON stringify failed", e);
+					}
+					var formatted = formatIpData(data);
+					setFieldValue("IP", formatted);
+					setFieldValue("ipinfo_ipAddress", data.ipAddress);
+					setFieldValue("ipinfo_ipVersion", data.ipVersion);
+					setFieldValue("ipinfo_countryName", data.countryName);
+					setFieldValue("ipinfo_countryCode", data.countryCode);
+					setFieldValue("ipinfo_cityName", data.cityName);
+					setFieldValue("ipinfo_regionName", data.regionName);
+					setFieldValue("ipinfo_regionCode", data.regionCode);
+					setFieldValue("ipinfo_zipCode", data.zipCode);
+					setFieldValue("ipinfo_continent", data.continent);
+					setFieldValue("ipinfo_continentCode", data.continentCode);
+					setFieldValue("ipinfo_latitude", data.latitude);
+					setFieldValue("ipinfo_longitude", data.longitude);
+					setFieldValue("ipinfo_asn", data.asn);
+					setFieldValue("ipinfo_asnOrganization", data.asnOrganization);
+					setFieldValue("ipinfo_isProxy", data.isProxy);
+					setFieldValue("ipinfo_timeZone", Array.isArray(data.timeZones) ? data.timeZones[0] : "");
+					setFieldValue("ipinfo_phoneCode", Array.isArray(data.phoneCodes) ? data.phoneCodes[0] : "");
+					setFieldValue("ipinfo_language", Array.isArray(data.languages) ? data.languages[0] : "");
+					setFieldValue("ipinfo_currency", Array.isArray(data.currencies) ? data.currencies[0] : "");
+				})
+				.catch(function (err) {
+					console.error("[IP Info] Fetch failed", err);
+				});
+		} catch (err) {
+			console.error("[IP Info] Fatal error", {
+				message: err && err.message ? err.message : String(err),
+				stack: err && err.stack ? err.stack : ""
+			});
+		}
+	});
+</script>
+
+    
+    <script>
+        (function () {
+  const DEBUG = true;
+
+  const TITLE_DIVISION = "Division";
+  const TITLE_CATEGORY = "Norican Sales Category";
+  const TITLE_PROCESS  = "Norican Sales Process";
+  const TITLE_TOPIC    = "Topic";
+
+  // ===========================
+  // Console Logging (Colour‑Coded)
+  // ===========================
+  const styles = {
+    base:   'padding:2px 6px;border-radius:4px;color:#fff;font-weight:600',
+    success:'background:#16a34a',
+    info:   'background:#2563eb',
+    warn:   'background:#d97706',
+    error:  'background:#dc2626'
+  };
+
+  function log(level, label, msg, extra) {
+    if (!DEBUG) return;
+    console.log(
+      `%c${label}`,
+      `${styles.base};${styles[level]}`,
+      msg || "",
+      extra || ""
+    );
+  }
+
+  const logSuccess = (m,e)=>log('success','SUCCESS',m,e);
+  const logInfo    = (m,e)=>log('info','INFO',m,e);
+  const logWarn    = (m,e)=>log('warn','WARN',m,e);
+  const logError   = (m,e)=>log('error','ERROR',m,e);
+
+  // ===========================
+  // Helpers
+  // ===========================
+  function ciMatchAttr(el, attr, value) {
+    return (el.getAttribute(attr) || "").trim().toLowerCase() === value.toLowerCase();
+  }
+
+  function findByTitle(root, title) {
+    const list = root.querySelectorAll("input[title], select[title], textarea[title]");
+    for (const el of list) {
+      if (ciMatchAttr(el, "title", title)) return el;
+    }
+    return null;
+  }
+
+  // Avoid rebinding the same root twice
+  const boundRoots = new WeakSet();
+
+  function bind(root) {
+    if (boundRoots.has(root)) return;
+
+    const divisionInput = findByTitle(root, TITLE_DIVISION);
+    const categoryInput = findByTitle(root, TITLE_CATEGORY);
+    const processInput  = findByTitle(root, TITLE_PROCESS);
+    const topicInput    = findByTitle(root, TITLE_TOPIC);
+
+    // Only bind if ALL fields exist
+    if (!divisionInput || !categoryInput || !processInput || !topicInput) return;
+
+    boundRoots.add(root);
+
+    logInfo("Bound Division + Category + Process → Topic", root);
+
+    function updateTopic(trigger = "input") {
+      const division = divisionInput.value?.trim() || "";
+      const category = categoryInput.value?.trim() || "";
+      const process  = processInput.value?.trim() || "";
+
+      if (!division && !category && !process) {
+        logWarn("All fields empty — Topic not updated.", { trigger });
+        return;
+      }
+
+      const parts = [division, category, process].filter(Boolean);
+      const combined = parts.join(" - ");
+
+      topicInput.value = combined;
+
+      logSuccess("Topic updated.", {
+        topic: combined,
+        trigger
+      });
+    }
+
+    // Attach listeners
+    [divisionInput, categoryInput, processInput].forEach(input => {
+      input.addEventListener("input",  () => updateTopic(`${input.title} input`));
+      input.addEventListener("change", () => updateTopic(`${input.title} change`));
+    });
+  }
+
+  // Bind to all existing forms
+  document.querySelectorAll("form").forEach(bind);
+
+  // Also bind to document root (in case fields aren't inside a form)
+  bind(document);
+
+  // Observe for dynamically added forms/fields
+  const obs = new MutationObserver(mutations => {
+    mutations.forEach(m => {
+      m.addedNodes.forEach(node => {
+        if (node.nodeType !== 1) return;
+
+        if (node.matches?.("form")) bind(node);
+        if (node.querySelector?.("[title]")) bind(document);
+      });
+    });
+  });
+
+  obs.observe(document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+
+  logInfo("Norican Topic Auto‑Fill (with Division) initialised.");
+})();
+    </script><script>
+        (function () {
+    // =========================
+    // Config
+    // =========================
+    const DEBUG = true; // Set to false in production to silence logs
+    const EMAIL_TITLE = 'email';
+    const WEBSITE_TITLE = 'website';
+
+    // =========================
+    // Console logging (colour coded)
+    // =========================
+    const styles = {
+      base:   'padding:2px 6px;border-radius:4px;color:#fff;font-weight:600',
+      success:'background:#16a34a',
+      info:   'background:#2563eb',
+      warn:   'background:#d97706',
+      error:  'background:#dc2626'
+    };
+    function log(level, label, msg, extra) {
+      if (!DEBUG) return;
+      const style = `${styles.base};${styles[level] || styles.info}`;
+      const parts = [`%c${label}`, style, msg || ''];
+      if (extra !== undefined) parts.push(extra);
+      console.log.apply(console, parts);
+    }
+    const logSuccess = (m, e) => log('success', 'SUCCESS', m, e);
+    const logInfo    = (m, e) => log('info',    'INFO',    m, e);
+    const logWarn    = (m, e) => log('warn',    'WARN',    m, e);
+    const logError   = (m, e) => log('error',   'ERROR',   m, e);
+
+    // =========================
+    // Helpers
+    // =========================
+    function ciAttrEquals(el, attr, expected) {
+      const v = (el.getAttribute(attr) || '').trim();
+      return v.localeCompare(expected, undefined, { sensitivity: 'accent' }) === 0
+          || v.toLowerCase() === expected.toLowerCase();
+    }
+
+    function findByTitleCI(root, title) {
+      // Case-insensitive match for input[title="..."]
+      const all = root.querySelectorAll('input[title]');
+      for (const el of all) {
+        if (ciAttrEquals(el, 'title', title)) return el;
+      }
+      return null;
+    }
+
+    function getDomainFromEmail(email) {
+      if (typeof email !== 'string') return '';
+      const atIndex = email.lastIndexOf('@');
+      if (atIndex === -1) return '';
+      const domain = email.slice(atIndex + 1).trim();
+      if (!domain || domain.includes(' ') || !domain.includes('.')) return '';
+      return domain;
+    }
+
+    function buildWebsiteUrl(domain) {
+      if (/^https?:\/\//i.test(domain)) return domain;
+      return 'https://' + domain.replace(/^\/+/, '');
+    }
+
+    // Optional: enable to skip personal mail providers
+    // const blocklist = new Set(['gmail.com','yahoo.com','outlook.com','hotmail.com','icloud.com','aol.com','proton.me','protonmail.com','gmx.com']);
+
+    // Track bindings to avoid double-listeners
+    const boundPairs = new WeakMap(); // form -> { emailInput, websiteInput, lastAutoValue }
+
+    function bindForm(formOrDocument) {
+      // We allow binding either to a <form> or the whole document (for pages without proper <form>)
+      const root = formOrDocument;
+
+      // Find the email and website inputs by title (case-insensitive)
+      const emailInput = findByTitleCI(root, EMAIL_TITLE);
+      const websiteInput = findByTitleCI(root, WEBSITE_TITLE);
+
+      if (!emailInput || !websiteInput) {
+        // If this is a <form>, log a warn per form; if it's the document, be less noisy.
+        if (root instanceof HTMLFormElement) {
+          if (!emailInput) logWarn(`No input with title "${EMAIL_TITLE}" in this form.`, root);
+          if (!websiteInput) logWarn(`No input with title "${WEBSITE_TITLE}" in this form.`, root);
+        }
+        return false;
+      }
+
+      // Prevent re-binding on the same root
+      if (boundPairs.has(root)) return true;
+
+      const state = { emailInput, websiteInput, lastAutoValue: '' };
+      boundPairs.set(root, state);
+
+      function maybeUpdateWebsiteFromEmail(trigger = 'input') {
+        const email = state.emailInput.value;
+        const domain = getDomainFromEmail(email);
+
+        if (!email) {
+          logInfo(`No email yet (trigger: ${trigger}).`);
+          return;
+        }
+        if (!domain) {
+          logWarn('Invalid or incomplete email; cannot extract domain.', { email, trigger });
+          return;
+        }
+
+        // if (blocklist.has(domain.toLowerCase())) {
+        //   logInfo('Domain on blocklist; skipping auto-fill.', { domain, trigger });
+        //   return;
+        // }
+
+        const proposed = buildWebsiteUrl(domain);
+
+        if (!state.websiteInput.value) {
+          state.websiteInput.value = proposed;
+          state.lastAutoValue = proposed;
+          logSuccess('Website auto-filled.', { proposed, trigger });
+          return;
+        }
+
+        if (state.websiteInput.value === state.lastAutoValue) {
+          state.websiteInput.value = proposed;
+          state.lastAutoValue = proposed;
+          logSuccess('Website updated from email (auto-managed).', { proposed, trigger });
+          return;
+        }
+
+        logWarn('Website field has a user-entered value; not overwriting.', {
+          currentWebsite: state.websiteInput.value,
+          proposed,
+          trigger
+        });
+      }
+
+      state.emailInput.addEventListener('input', () => maybeUpdateWebsiteFromEmail('input'));
+      state.emailInput.addEventListener('blur',  () => maybeUpdateWebsiteFromEmail('blur'));
+
+      state.websiteInput.addEventListener('input', () => {
+        if (!DEBUG) return;
+        if (state.websiteInput.value !== state.lastAutoValue) {
+          logInfo('User edited website field manually.', { value: state.websiteInput.value });
+        }
+      });
+
+      logInfo('Bound email→website autofill on root', root);
+      return true;
+    }
+
+    // Bind to each existing form
+    const forms = Array.from(document.querySelectorAll('form'));
+    let anyBound = false;
+    for (const f of forms) {
+      anyBound = bindForm(f) || anyBound;
+    }
+
+    // If no forms or none matched, try binding at document level (in case inputs aren't wrapped in a form)
+    if (!anyBound) {
+      bindForm(document);
+    }
+
+    // Observe DOM changes to auto-bind on dynamically added forms/inputs
+    const observer = new MutationObserver(mutations => {
+      let shouldRebindDoc = false;
+      for (const m of mutations) {
+        // If a form is added, try binding it
+        m.addedNodes && m.addedNodes.forEach(node => {
+          if (node.nodeType === 1) { // ELEMENT_NODE
+            if (node.matches && node.matches('form')) {
+              bindForm(node);
+            } else if (node.querySelector) {
+              // If inputs were injected directly under some container, try to bind document once
+              if (node.querySelector('input[title]')) {
+                shouldRebindDoc = true;
+              }
+            }
+          }
+        });
+      }
+      if (shouldRebindDoc) bindForm(document);
+    });
+    observer.observe(document.documentElement || document.body, { childList: true, subtree: true });
+
+    logInfo('Email→Website script initialised (titles: "email" → "website").');
+  })();
+    </script><script>
+        (function () {
+  // ========== Badge & Text Styles ==========
+  const LOG_PREFIX  = " CRM-Website-MTM-Fields ";
+  const BADGE_GREEN = "background:#28A745; color:#ffffff; padding:2px 6px; border-radius:999px; font-weight:bold;";
+  const BADGE_RED   = "background:#DC3545; color:#ffffff; padding:2px 6px; border-radius:999px; font-weight:bold;";
+  const BADGE_AMBER = "background:#FFC107; color:#000000; padding:2px 6px; border-radius:999px; font-weight:bold;";
+  const TXT_DEFAULT = "color:#333;";
+  const TXT_SUCCESS = "color:#28A745; font-weight:500;";
+  const TXT_ERROR   = "color:#DC3545; font-weight:600;";
+  const TXT_WARN    = "color:#B08900; font-weight:600;";
+  const logInfo    = (...m) => console.log   ("%c" + LOG_PREFIX, BADGE_GREEN, "%c" + m.join(" "), TXT_DEFAULT);
+  const logSuccess = (...m) => console.log   ("%c" + LOG_PREFIX, BADGE_GREEN, "%c" + m.join(" "), TXT_SUCCESS);
+  const logWarn    = (...m) => console.warn  ("%c" + LOG_PREFIX, BADGE_AMBER, "%c" + m.join(" "), TXT_WARN);
+  const logError   = (...m) => console.error ("%c" + LOG_PREFIX, BADGE_RED,   "%c" + m.join(" "), TXT_ERROR);
+  const groupStart = (label, collapsed = false) => {
+    const header = "%c" + LOG_PREFIX + "%c " + String(label);
+    const fn = collapsed ? console.groupCollapsed : console.group;
+    fn(header, BADGE_GREEN, TXT_DEFAULT);
+  };
+  const groupEnd = () => { try { console.groupEnd(); } catch (_) {} };
+  // ---- Config: Field titles and corresponding URL/session keys ----
+  const FIELD_MAP = [
+    { title: "MTM Source",   key: "mtm_source"   },
+    { title: "MTM Medium",   key: "mtm_medium"   },
+    { title: "MTM Campaign", key: "mtm_campaign" },
+    { title: "MTM Content",  key: "mtm_content"  },
+    { title: "MTM Term",     key: "mtm_term"     }
+  ];
+  // NEW: Default fallback (used when a value is missing)
+  const DEFAULT_VALUE = "No-data-detected";
+  // If true, also store DEFAULT_VALUE into sessionStorage when nothing is present
+  const STORE_DEFAULTS_IN_SESSION = false;
+  // Existing: Referrer URL (cleaned)
+  const REFERRER_URL_FIELD_TITLE = "Referrer URL";
+  const REFERRER_URL_SESSION_KEY = "referrer_url_clean";
+  // Optional reset flag (URL: ?mtm_reset=1|true|yes)
+  const RESET_FLAG_PARAM = "mtm_reset";
+  // ---- Clean URL settings (strings to remove) ----
+  const STRIP_PARAM_KEYS = ["gclid","fbclid","msclkid","ttclid","yclid","mc_eid","dm_i"];
+  const STRIP_PARAM_PREFIXES = ["utm_","mtm_"];
+  const REMOVE_HASH = true;
+  const REMOVE_PROTOCOL = false;
+  const REMOVE_HOST = false;
+  // ---------- Utilities ----------
+  function norm(s) {
+    return (s || "").replace(/\s+/g, " ").trim().toLowerCase();
+  }
+  function findFieldByTitle(rootDoc, labelText) {
+    const target = norm(labelText);
+    // 1) aria-label exact
+    let el = rootDoc.querySelector(`input[aria-label="${labelText}"], textarea[aria-label="${labelText}"], select[aria-label="${labelText}"]`);
+    if (el) return el;
+    // 2) label text exact → via for/id or nearby container
+    const labels = Array.from(rootDoc.querySelectorAll("label"));
+    for (const lab of labels) {
+      if (norm(lab.textContent) === target) {
+        const forId = lab.getAttribute("for");
+        if (forId) {
+          const byFor = rootDoc.getElementById(forId);
+          if (byFor) return byFor;
+        }
+        const nearby = lab.closest("[data-editor-container], .field, .control, div")?.querySelector("input, textarea, select");
+        if (nearby) return nearby;
+      }
+    }
+    // 3) title/placeholder exact
+    el = rootDoc.querySelector(
+      `input[title="${labelText}"], textarea[title="${labelText}"], select[title="${labelText}"],` +
+      `input[placeholder="${labelText}"], textarea[placeholder="${labelText}"]`
+    );
+    if (el) return el;
+    // 4) contains fallback
+    el = rootDoc.querySelector(
+      `input[aria-label*="${labelText}"], textarea[aria-label*="${labelText}"], select[aria-label*="${labelText}"],` +
+      `input[title*="${labelText}"], textarea[title*="${labelText}"],` +
+      `input[placeholder*="${labelText}"], textarea[placeholder*="${labelText}"]`
+    );
+    return el || null;
+  }
+  function setFieldValue(field, value) {
+    field.value = value;
+    field.dispatchEvent(new Event('input',  { bubbles: true }));
+    field.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+  // ---------- URL cleaning ----------
+  function buildCleanUrl(loc) {
+    try {
+      const u = new URL(loc.href);
+      if (REMOVE_HASH) u.hash = "";
+      const toDelete = [];
+      u.searchParams.forEach((v, k) => {
+        const kLower = k.toLowerCase();
+        const exactHit = STRIP_PARAM_KEYS.includes(kLower);
+        const prefixHit = STRIP_PARAM_PREFIXES.some(p => kLower.startsWith(p));
+        if (exactHit || prefixHit) toDelete.push(k);
+      });
+      toDelete.forEach(k => u.searchParams.delete(k));
+      let result = u.toString();
+      if (REMOVE_PROTOCOL) result = result.replace(/^https?:\/\//i, "");
+      if (REMOVE_HOST) result = u.pathname + (u.search || "");
+      return result;
+    } catch (e) {
+      logWarn("Failed to build clean URL. Falling back to location.href.");
+      return loc.href;
+    }
+  }
+  // ---------- Session Storage Helpers ----------
+  function saveParamsToSession(params, reset = false) {
+    groupStart("Session Storage: Save Params", true);
+    try {
+      FIELD_MAP.forEach(({ key }) => {
+        const urlVal = params.get(key);
+        const existing = sessionStorage.getItem(key);
+        if (urlVal !== null && urlVal !== "") {
+          if (reset || existing === null) {
+            sessionStorage.setItem(key, urlVal);
+            logSuccess(`Saved '${key}' = '${urlVal}' to sessionStorage${reset ? " (reset)" : ""}.`);
+          } else {
+            logInfo(`Skipped '${key}' (already exists and reset=false). existing='${existing}'.`);
+          }
+        } else if (STORE_DEFAULTS_IN_SESSION && (existing === null || reset)) {
+          // Optional: store default if no URL value
+          sessionStorage.setItem(key, DEFAULT_VALUE);
+          logWarn(`No URL value for '${key}'. Stored default '${DEFAULT_VALUE}' in sessionStorage.`);
+        } else {
+          logInfo(`No URL value for '${key}' — leaving sessionStorage as is.`);
+        }
+      });
+    } catch (e) {
+      logError("Error writing to sessionStorage:", e.message || e);
+    } finally {
+      groupEnd();
+    }
+  }
+  // Returns a value from session → URL → DEFAULT_VALUE
+  function getValueForKey(params, key) {
+    const fromSession = sessionStorage.getItem(key);
+    if (fromSession !== null && fromSession !== "") return fromSession;
+    const fromUrl = params.get(key);
+    if (fromUrl !== null && fromUrl !== "") return fromUrl;
+    return DEFAULT_VALUE; // fallback when nothing is tracked
+  }
+  function populateMTMFields(rootDoc) {
+    groupStart("Populate MTM Fields");
+    try {
+      const params = new URLSearchParams(rootDoc.defaultView ? rootDoc.defaultView.location.search : window.location.search);
+      const reset = ["1", "true", "yes"].includes((params.get(RESET_FLAG_PARAM) || "").toLowerCase());
+      logInfo("URL params:", params.toString() || "(none)");
+      if (reset) logWarn(`Reset flag detected via '${RESET_FLAG_PARAM}' — URL values will overwrite sessionStorage.`);
+      // 1) Persist mtm_* URL params into session storage (respecting reset)
+      saveParamsToSession(params, reset);
+      // 2) Compute and store cleaned Referrer URL
+      groupStart("Referrer URL (clean)");
+      const cleanUrl = buildCleanUrl(rootDoc.defaultView ? rootDoc.defaultView.location : window.location);
+      try {
+        sessionStorage.setItem(REFERRER_URL_SESSION_KEY, cleanUrl);
+        logSuccess("Saved cleaned referrer URL to sessionStorage:", cleanUrl);
+      } catch (e) {
+        logError("Failed saving cleaned referrer URL to sessionStorage:", e.message || e);
+      }
+      groupEnd();
+      // Check if none of the MTM values exist (URL or session)
+      const hasAnyMTM =
+        FIELD_MAP.some(({ key }) => {
+          const s = sessionStorage.getItem(key);
+          const u = params.get(key);
+          return (s && s !== "") || (u && u !== "");
+        });
+      if (!hasAnyMTM) {
+        logWarn("No MTM params found in session or URL. Fields will be populated with default:", DEFAULT_VALUE);
+      }
+      // 3) Retry loop to fill fields (including Referrer URL) after form renders
+      let attempt = 0;
+      const maxAttempts = 5;
+      const delayMs = 250;
+      const tryFill = () => {
+        attempt++;
+        let filledCount = 0;
+        groupStart(`Attempt ${attempt}/${maxAttempts}`, true);
+        // Fill MTM fields (with default fallback)
+        for (const { title, key } of FIELD_MAP) {
+          const value = getValueForKey(params, key);
+          const field = findFieldByTitle(rootDoc, title);
+          if (!field) {
+            logWarn(`Field '${title}' not found on attempt ${attempt}.`);
+            continue;
+          }
+          setFieldValue(field, value);
+          const isDefault = value === DEFAULT_VALUE;
+          logSuccess(`Set '${title}' to '${value}'.${isDefault ? " (default applied)" : ""}`);
+          filledCount++;
+        }
+        // Fill Referrer URL field
+        const refField = findFieldByTitle(rootDoc, REFERRER_URL_FIELD_TITLE);
+        if (refField) {
+          const value = sessionStorage.getItem(REFERRER_URL_SESSION_KEY) || cleanUrl;
+          setFieldValue(refField, value);
+          logSuccess(`Set '${REFERRER_URL_FIELD_TITLE}' to cleaned URL.`);
+          filledCount++;
+        } else {
+          logWarn(`Field '${REFERRER_URL_FIELD_TITLE}' not found on attempt ${attempt}.`);
+        }
+        groupEnd(); // end Attempt
+        const totalTargets = FIELD_MAP.length + 1; // + Referrer URL
+        if (filledCount === totalTargets) {
+          logSuccess("All MTM fields + Referrer URL populated successfully.");
+          groupEnd(); // end Populate MTM Fields
+        } else if (attempt < maxAttempts) {
+          logWarn(`Populated ${filledCount}/${totalTargets} field(s). Retrying…`);
+          setTimeout(tryFill, delayMs);
+        } else {
+          logError(`Completed ${filledCount}/${totalTargets} after ${maxAttempts} attempts. Some fields not found.`);
+          groupEnd(); // end Populate MTM Fields
+        }
+      };
+      tryFill();
+    } catch (e) {
+      logError("Unhandled error while populating MTM fields:", e.message || e);
+      groupEnd();
+    }
+  }
+  // ---- Event hookup ----
+  document.addEventListener("d365mkt-afterformload", function () {
+    // Main document
+    populateMTMFields(document);
+    // If your Marketing form is embedded in an iframe, enable this block:
+    /*
+    const frm = document.querySelector('iframe[src*="mktform"], iframe[src*="forms.dynamics.com"], iframe[data-test-id="marketing-form"]');
+    if (frm && frm.contentDocument) {
+      populateMTMFields(frm.contentDocument);
+    } else {
+      logWarn("Marketing form iframe not detected; proceeding with main document only.");
+    }
+    */
+  });
+})();
+    </script><form class="marketingForm">
+        <div data-layout="true" data-layout-version="v2" style="max-width: 600px; margin: auto;">
+            <div class="notification-container">
+                <div class="notification-message notification-message-hide" data-notification-name="eventNotStarted">
+                    <div>This event has not started.</div>
+                </div>
+                <div class="notification-message notification-message-hide" data-notification-name="eventAtCapacity">
+                    <div>This event is fully booked</div>
+                </div>
+                <div class="notification-message notification-message-hide" data-notification-name="eventEnded">
+                    <div>This event has ended.</div>
+                </div>
+                <div class="notification-message notification-message-hide" data-notification-name="sessionsFullyBookedEventHasCapacity">
+                    <div>All sessions are fully booked but you can still register for the event.</div>
+                </div>
+                <div class="notification-message notification-message-hide" data-notification-name="eventWaitlisted">
+                    <div>This event is full, but you can still sign up for the waitlist.</div>
+                </div>
+            </div>
+            <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="padding: 10px; display: flex;">
+                <div class="columnContainer" data-container="true" data-container-width="100" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 560px; justify-content: start; display: flex; flex-direction: column;" id="container7a384d679e3bf81763717183618">
+                    <div data-editorblocktype="Text" style="margin: 10px;">
+                        <h1>Lead</h1>
+                    </div>
+
+                </div>
+            </div>
+            <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="padding: 10px; display: flex; background-color: rgb(255, 255, 255); border-radius: 1px; border-style: solid; border-width: 1px; border-color: rgb(0, 0, 0);">
+                <div class="columnContainer" data-container="true" data-container-width="33.33" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 172.65px; justify-content: start; display: flex; flex-direction: column; flex: 0 0 172.65px;" id="containerff493ca6c908a1770188370700">
+                    <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="lead" data-targetproperty="nor_mtmsource" data-prefill="false" data-savedfieldid="509087d4-9701-f111-8407-002248a2720a">
+                        <label title="MTM Source" for="nor_mtmsource-1770188574007"><span style="color: rgb(50, 49, 48);">MTM Source</span></label><input id="nor_mtmsource-1770188574007" type="text" name="nor_mtmsource" placeholder="" title="MTM Source" maxlength="100">
+                    </div>
+                    <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="lead" data-targetproperty="nor_mtmmedium" data-prefill="false" data-savedfieldid="501e04ed-9701-f111-8407-002248a2720a">
+                        <label title="MTM Medium" for="nor_mtmmedium-1770188569827">MTM Medium</label><input id="nor_mtmmedium-1770188569827" type="text" name="nor_mtmmedium" placeholder="" title="MTM Medium" maxlength="100">
+                    </div>
+                </div>
+                <div class="columnContainer" data-container="true" data-container-width="33.33" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 172.65px; justify-content: start; display: flex; flex-direction: column; flex: 0 0 172.65px;" id="container0809d01856d5a1770188370700">
+                    <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="lead" data-targetproperty="nor_mtmcampaign" data-prefill="false" data-savedfieldid="189087d4-9701-f111-8407-002248a2720a">
+                        <label title="MTM Campaign" for="nor_mtmcampaign-1770188553797"><span style="color: rgb(50, 49, 48);">MTM Campaign</span></label><input id="nor_mtmcampaign-1770188553797" type="text" name="nor_mtmcampaign" placeholder="" title="MTM Campaign" maxlength="100">
+                    </div>
+                    <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="lead" data-targetproperty="nor_mtmcontent" data-prefill="false" data-savedfieldid="221e04ed-9701-f111-8407-002248a2720a">
+                        <label title="MTM Content" for="nor_mtmcontent-1770188561619">MTM Content</label><input id="nor_mtmcontent-1770188561619" type="text" name="nor_mtmcontent" placeholder="" title="MTM Content" maxlength="100">
+                    </div>
+                </div>
+                <div class="columnContainer" data-container="true" data-container-width="33.33" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 172.65px; justify-content: start; display: flex; flex-direction: column; flex: 0 0 172.65px;" id="containere797e44251da681770188370700">
+                    <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="lead" data-targetproperty="nor_mtmterm" data-prefill="false" data-savedfieldid="b6b484da-9701-f111-8407-002248a2720a">
+                        <label title="MTM Term" for="nor_mtmterm-1770188578416"><span style="color: rgb(50, 49, 48);">MTM Term</span></label><input id="nor_mtmterm-1770188578416" type="text" name="nor_mtmterm" placeholder="" title="MTM Term" maxlength="100">
+                    </div>
+                    <div class="lookupFormFieldBlock" data-editorblocktype="LookupFormField" data-targetaudience="lead" data-targetproperty="campaignid" data-lookuptargets="[{&quot;LogicalName&quot;:&quot;campaign&quot;,&quot;PrimarySavedQueryId&quot;:&quot;e0ae0e28-bae2-41e8-bc76-adc046eb6987&quot;,&quot;PrimaryNameAttribute&quot;:&quot;name&quot;,&quot;DefaultValue&quot;:{&quot;id&quot;:&quot;e517dadf-6bb6-f011-bbd3-000d3adccc52&quot;,&quot;name&quot;:&quot;Lead form&quot;},&quot;PrimaryNameAttributeValue&quot;:&quot;Lead form&quot;}]" data-prefill="false" data-publicvisibility="true">
+                        <label title="Source Campaign" for="bd34c3fb-7066-4c22-a389-a39f8969a94a">Source Campaign</label><input id="bd34c3fb-7066-4c22-a389-a39f8969a94a" type="text" name="campaignid" placeholder="" title="Source Campaign" list="list-bd34c3fb-7066-4c22-a389-a39f8969a94a"><datalist id="list-bd34c3fb-7066-4c22-a389-a39f8969a94a"></datalist>
+                    </div>
+                </div>
+            </div><div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="padding: 10px; display: flex;"><div class="columnContainer" data-container="true" data-container-width="100" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 560px; justify-content: start; display: flex; flex-direction: column;" id="container34e71f3c34c8281770193543993">
+                                  <div data-editorblocktype="Divider" style="margin: 20px 10px;"><div class="dividerWrapper" align="center"><table style="padding: 0px; margin: 0px; width: 100%; border-collapse: collapse;" role="presentation" class="" cellpadding="0" cellspacing="0"><tbody><tr style="padding: 0px;"><th style="margin:0px; padding: 0px; vertical-align:top;border-top-width: 2px; border-top-style: solid; border-top-color: #e1dfdd;"><p style="margin: 0px; padding: 0px; line-height: 0px; width: 100%;"><span><!--[if gte mso 9]><br/><![endif]-->&nbsp;</span></p></th></tr></tbody></table></div></div></div></div>
+            <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="padding: 10px; display: flex; border-style: solid; border-width: 1px; border-color: rgb(0, 0, 0);">
+                <div class="columnContainer" data-container="true" data-container-width="33.33" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 172.65px; justify-content: start; display: flex; flex-direction: column; flex: 0 0 172.65px;" id="containera3b84cc608c7c81770191363853">
+                    <div class="twoOptionFormFieldBlock" data-editorblocktype="TwoOptionFormField" data-targetaudience="lead" data-targetproperty="msdyncrm_salesready" data-options="[{&quot;value&quot;:&quot;1&quot;,&quot;label&quot;:&quot;Yes&quot;},{&quot;value&quot;:&quot;0&quot;,&quot;label&quot;:&quot;No&quot;}]" data-prefill="false" data-savedfieldid="dec5e017-9e01-f111-8407-002248a2720a">
+                        <div class="twooption_checkbox">
+                            <div>
+                                <input type="checkbox" id="msdyncrm_salesready-1770190812545" name="msdyncrm_salesready" value="1" title="Sales ready" checked=""><label title="Sales ready" class="block-label" for="msdyncrm_salesready-1770190812545">Sales ready</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="optionSetFormFieldBlock" data-editorblocktype="OptionSetFormField" data-targetaudience="lead" data-targetproperty="leadqualitycode" data-prefill="false" data-savedfieldid="17c6e017-9e01-f111-8407-002248a2720a">
+                        <label title="Rating" class="block-label" for="leadqualitycode-1770191332591">Rating</label><select id="leadqualitycode-1770191332591" name="leadqualitycode" title="Rating"><option value="" hidden=""></option><option id="leadqualitycode-1770191332591-1" value="1" selected="true">Hot</option><option id="leadqualitycode-1770191332591-2" value="2">Warm</option><option id="leadqualitycode-1770191332591-3" value="3">Cold</option></select>
+                    </div>
+                </div>
+                <div class="columnContainer" data-container="true" data-container-width="33.33" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 172.65px; justify-content: start; display: flex; flex-direction: column; flex: 0 0 172.65px;" id="container2fe20f3e174fc1770191363853">
+                    <div class="optionSetFormFieldBlock" data-editorblocktype="OptionSetFormField" data-targetaudience="lead" data-targetproperty="leadsourcecode" data-prefill="prefill" data-savedfieldid="1ff0d8bd-9801-f111-8407-002248a2720a">
+                        <label title="Lead Source" class="block-label" for="leadsourcecode-1770189082703">Lead Source</label><select id="leadsourcecode-1770189082703" name="leadsourcecode" title="Lead Source"><option value="" hidden="">Placeholder </option><option id="leadsourcecode-1770189082703-192350100" value="192350100">Landing page</option><option id="leadsourcecode-1770189082703-1" value="1">Advertisement</option><option id="leadsourcecode-1770189082703-2" value="2">Employee Referral</option><option id="leadsourcecode-1770189082703-3" value="3">External Referral</option><option id="leadsourcecode-1770189082703-4" value="4">Partner</option><option id="leadsourcecode-1770189082703-5" value="5">Public Relations</option><option id="leadsourcecode-1770189082703-6" value="6">Seminar</option><option id="leadsourcecode-1770189082703-7" value="7">Trade Show</option><option id="leadsourcecode-1770189082703-8" value="8" selected="true">Web</option><option id="leadsourcecode-1770189082703-9" value="9">Word of Mouth</option><option id="leadsourcecode-1770189082703-10" value="10">Other</option><option id="leadsourcecode-1770189082703-192350000" value="192350000">LinkedIn Sponsored Form</option><option id="leadsourcecode-1770189082703-831900000" value="831900000">Journey</option></select>
+                    </div>
+                </div>
+                <div class="columnContainer" data-container="true" data-container-width="33.33" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 172.65px; justify-content: start; display: flex; flex-direction: column; flex: 0 0 172.65px;" id="containerbeaae09afecfd1770191363853">
+                    <div class="optionSetFormFieldBlock" data-editorblocktype="OptionSetFormField" data-targetaudience="lead" data-targetproperty="msdyncrm_leadsourcetype" data-prefill="false" data-savedfieldid="1f876a1e-9e01-f111-8407-002248a2720a">
+                        <label title="Lead source type" class="block-label" for="msdyncrm_leadsourcetype-1770190787910">Lead source type</label><select id="msdyncrm_leadsourcetype-1770190787910" name="msdyncrm_leadsourcetype" title="Lead source type"><option value="" hidden=""></option><option id="msdyncrm_leadsourcetype-1770190787910-192350000" value="192350000" selected="true">Marketing</option><option id="msdyncrm_leadsourcetype-1770190787910-192350001" value="192350001">Sales</option><option id="msdyncrm_leadsourcetype-1770190787910-192350002" value="192350002">Teleprospect</option></select>
+                    </div>
+                </div>
+            </div><div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="padding: 10px; display: flex;"><div class="columnContainer" data-container="true" data-container-width="100" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 560px; justify-content: start; display: flex; flex-direction: column;" id="containercd4affa03f5891770193562789">
+                                  <div data-editorblocktype="Divider" style="margin: 20px 10px;"><div class="dividerWrapper" align="center"><table style="padding: 0px; margin: 0px; width: 100%; border-collapse: collapse;" role="presentation" class="" cellpadding="0" cellspacing="0"><tbody><tr style="padding: 0px;"><th style="margin:0px; padding: 0px; vertical-align:top;border-top-width: 2px; border-top-style: solid; border-top-color: #e1dfdd;"><p style="margin: 0px; padding: 0px; line-height: 0px; width: 100%;"><span><!--[if gte mso 9]><br/><![endif]-->&nbsp;</span></p></th></tr></tbody></table></div></div></div></div>
+            <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="padding: 10px; display: flex; border-style: solid; border-width: 1px; border-color: rgb(0, 0, 0);">
+                <div class="columnContainer" data-container="true" data-container-width="33.33" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 172.65px; justify-content: start; display: flex; flex-direction: column; flex: 0 0 172.65px;" id="container1862d0a1c026c81770191443657">
+                    <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="lead" data-targetproperty="subject" data-required="required" data-prefill="false" data-savedfieldid="c7422963-9e01-f111-8407-002248a2720a">
+                        <label title="Topic" for="subject-1770190989556">Topic</label><input id="subject-1770190989556" type="text" name="subject" placeholder="" title="Topic" maxlength="300" required="required" value="">
+                    </div>
+                </div>
+                <div class="columnContainer" data-container="true" data-container-width="33.33" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 172.65px; justify-content: start; display: flex; flex-direction: column; flex: 0 0 172.65px;" id="container83cb6cc6947e081770191443657">
+                    <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-prefill="prefill" data-savedfieldid="f4f92dfb-9801-f111-8407-002248a2720a">
+                        <label title="Field label" for="shorttext3329-1770189150036">Referrer URL</label><input id="shorttext3329-1770189150036" type="text" name="Referrer URL" placeholder="" title="Field label" maxlength="256">
+                    </div>
+                </div>
+                <div class="columnContainer" data-container="true" data-container-width="33.33" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 172.65px; justify-content: start; display: flex; flex-direction: column; flex: 0 0 172.65px;" id="container770471dab7eff1770191443657">
+                </div>
+            </div>
+            <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="padding: 10px; display: flex;">
+                <div class="columnContainer" data-container="true" data-container-width="100" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 560px; justify-content: start; display: flex; flex-direction: column;" id="containera06390972f95f1770189319153">
+
+                <div data-editorblocktype="Divider" style="margin: 20px 10px;"><div class="dividerWrapper" align="center"><table style="padding: 0px; margin: 0px; width: 100%; border-collapse: collapse;" role="presentation" class="" cellpadding="0" cellspacing="0"><tbody><tr style="padding: 0px;"><th style="margin:0px; padding: 0px; vertical-align:top;border-top-width: 2px; border-top-style: solid; border-top-color: #e1dfdd;"><p style="margin: 0px; padding: 0px; line-height: 0px; width: 100%;"><span><!--[if gte mso 9]><br/><![endif]-->&nbsp;</span></p></th></tr></tbody></table></div></div></div>
+            </div><div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="padding: 10px; display: flex;"><div class="columnContainer" data-container="true" data-container-width="50" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 270px; justify-content: start; display: flex; flex-direction: column;" id="containerc01b1f69d835e81770193591352">
+                                      <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="lead" data-targetproperty="firstname" data-prefill="prefill" data-required="required">
+                        <label title="First Name" for="firstname-1763717208898">First Name</label><input id="firstname-1763717208898" type="text" name="firstname" placeholder="Steven" title="First Name" maxlength="50" value="Steven" required="required">
+                    </div><div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="lead" data-targetproperty="emailaddress1" data-prefill="prefill" data-required="required">
+                        <label title="Email" for="emailaddress1-1763717222444">Email</label><input id="emailaddress1-1763717222444" type="email" name="emailaddress1" placeholder="" title="Email" value="" required="required">
+                    </div><div class="phoneFormFieldBlock" data-editorblocktype="PhoneFormField" data-targetaudience="lead" data-targetproperty="telephone1" data-countrycode="+" data-prefill="prefill">
+                        <label title="Business Phone" for="telephone1-1770187927581">Business Phone</label>
+                        <div class="phoneCountryCode"><span class="phoneCountryCodeLabel" hidden="">+</span><input id="telephone1-1770187927581" type="tel" name="telephone1" placeholder="" title="Business Phone">
+                        </div>
+                    </div><div class="lookupFormFieldBlock" data-editorblocktype="LookupFormField" data-targetaudience="lead" data-targetproperty="nor_country" data-lookuptargets="[{&quot;LogicalName&quot;:&quot;nor_country&quot;,&quot;PrimarySavedQueryId&quot;:&quot;3755a006-fbe9-4cec-9560-5283b23a6c71&quot;,&quot;PrimaryNameAttribute&quot;:&quot;nor_name&quot;,&quot;DefaultValue&quot;:{&quot;id&quot;:&quot;9bf5621e-89bc-f011-bbd3-000d3a65fe5a&quot;,&quot;name&quot;:&quot;UNITED STATES&quot;},&quot;PrimaryNameAttributeValue&quot;:&quot;UNITED STATES&quot;}]" data-prefill="false" data-publicvisibility="true" data-required="required">
+                        <label title="Country" for="a08d07d8-aa7d-4bf2-b3cd-05958d672d46">Country</label><input id="a08d07d8-aa7d-4bf2-b3cd-05958d672d46" type="text" name="nor_country" placeholder="" title="Country" list="list-a08d07d8-aa7d-4bf2-b3cd-05958d672d46" required="required"><datalist id="list-a08d07d8-aa7d-4bf2-b3cd-05958d672d46"></datalist>
+                    </div></div><div class="columnContainer" data-container="true" data-container-width="50" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 270px; justify-content: start; display: flex; flex-direction: column;" id="container4211bbbbefc0f81770193591352">
+                                      <div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="lead" data-targetproperty="lastname" data-required="required" data-prefill="prefill">
+                        <label title="Last Name" for="lastname-1763717195488">Last Name</label><input id="lastname-1763717195488" type="text" name="lastname" placeholder="Smith" title="Last Name" maxlength="50" required="required" value="Smith">
+                    </div><div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="lead" data-targetproperty="websiteurl" data-prefill="prefill" data-savedfieldid="3bd3d3a4-9801-f111-8407-002248a2720a">
+                        <label title="Website" for="websiteurl-1770189041156">Website</label><input id="websiteurl-1770189041156" type="url" name="websiteurl" placeholder="" title="Website" pattern="(http(s)?:\/\/.)?(www\.)?[\-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([\-a-zA-Z0-9@:%_\+.~#?&amp;\/\/=]*)">
+                    </div><div class="textFormFieldBlock" data-editorblocktype="TextFormField" data-targetaudience="lead" data-targetproperty="companyname" data-prefill="false" data-required="required">
+                        <label title="Company Name" for="companyname-1763717479672">Company Name</label><input id="companyname-1763717479672" type="text" name="companyname" placeholder="Smith Co" title="Company Name" maxlength="100" value="Smith Co" required="required">
+                    </div><div class="lookupFormFieldBlock" data-editorblocktype="LookupFormField" data-targetaudience="lead" data-targetproperty="nor_state" data-lookuptargets="[{&quot;LogicalName&quot;:&quot;nor_state&quot;,&quot;PrimarySavedQueryId&quot;:&quot;5363abf6-e8e5-4a84-aca2-7b55c5602048&quot;,&quot;PrimaryNameAttribute&quot;:&quot;nor_name&quot;,&quot;DefaultValue&quot;:{&quot;id&quot;:&quot;ba489997-a7bf-f011-bbd3-000d3adccc52&quot;,&quot;name&quot;:&quot;Michigan&quot;},&quot;PrimaryNameAttributeValue&quot;:&quot;Michigan&quot;}]" data-prefill="false" data-publicvisibility="true" data-parent-fieldid="a08d07d8-aa7d-4bf2-b3cd-05958d672d46" data-parent-child-entity-logicalname="nor_state" data-parent-child-to-parent="nor_country">
+                        <label title="State" for="9e4444db-b2db-49a6-b275-a9f2971487be">State</label><input id="9e4444db-b2db-49a6-b275-a9f2971487be" type="text" name="nor_state" placeholder="" title="State" list="list-9e4444db-b2db-49a6-b275-a9f2971487be"><datalist id="list-9e4444db-b2db-49a6-b275-a9f2971487be"></datalist>
+                    </div></div></div>
+            <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="padding: 10px; display: flex;">
+                <div class="columnContainer" data-container="true" data-container-width="100" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 560px; justify-content: start; display: flex; flex-direction: column;" id="container13b8fc4eef95281770187650804">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                <div data-editorblocktype="Divider" style="margin: 20px 10px;"><div class="dividerWrapper" align="center"><table style="padding: 0px; margin: 0px; width: 100%; border-collapse: collapse;" role="presentation" class="" cellpadding="0" cellspacing="0"><tbody><tr style="padding: 0px;"><th style="margin:0px; padding: 0px; vertical-align:top;border-top-width: 2px; border-top-style: solid; border-top-color: #e1dfdd;"><p style="margin: 0px; padding: 0px; line-height: 0px; width: 100%;"><span><!--[if gte mso 9]><br/><![endif]-->&nbsp;</span></p></th></tr></tbody></table></div></div></div>
+            </div><div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="padding: 10px; display: flex;"><div class="columnContainer" data-container="true" data-container-width="50.00" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 270px; justify-content: start; display: flex; flex-direction: column;" id="container10a031f52d2ac81770193626246">
+                                      <div class="lookupFormFieldBlock" data-editorblocktype="LookupFormField" data-targetaudience="lead" data-targetproperty="nor_division" data-lookuptargets="[{&quot;LogicalName&quot;:&quot;nor_division&quot;,&quot;PrimarySavedQueryId&quot;:&quot;473601cf-72a0-4a9a-b3f4-9c90900d425b&quot;,&quot;PrimaryNameAttribute&quot;:&quot;nor_name&quot;,&quot;DefaultValue&quot;:{&quot;id&quot;:&quot;9e983b9b-90bc-f011-bbd3-000d3adccc52&quot;,&quot;name&quot;:&quot;DISA&quot;},&quot;PrimaryNameAttributeValue&quot;:&quot;DISA&quot;}]" data-prefill="false" data-publicvisibility="true">
+                        <label title="Division" for="3d9a1f12-f9a8-462c-85b0-cf5d64bccd8b">Division</label><input id="3d9a1f12-f9a8-462c-85b0-cf5d64bccd8b" type="text" name="nor_division" placeholder="" title="Division" list="list-3d9a1f12-f9a8-462c-85b0-cf5d64bccd8b"><datalist id="list-3d9a1f12-f9a8-462c-85b0-cf5d64bccd8b"></datalist>
+                    </div><div class="optionSetFormFieldBlock" data-editorblocktype="OptionSetFormField" data-targetaudience="lead" data-targetproperty="nor_inquiry" data-prefill="false" data-required="required"><label title="Inquiry" class="block-label" for="nor_inquiry-1763717395923">Inquiry</label><div class="radiobuttons" id="nor_inquiry-1763717395923"><div><input type="radio" value="874890000" name="nor_inquiry" id="nor_inquiry-1763717395923-874890000" title="General" required="required" checked=""><label for="874890000" title="General">General</label></div><div><input type="radio" value="874890001" name="nor_inquiry" id="nor_inquiry-1763717395923-874890001" title="New inquiry" required=""><label for="874890001" title="New inquiry">New inquiry</label></div><div><input type="radio" value="874890002" name="nor_inquiry" id="nor_inquiry-1763717395923-874890002" title="Parts &amp; service" required=""><label for="874890002" title="Parts &amp; service">Parts &amp; service</label></div></div></div></div><div class="columnContainer" data-container="true" data-container-width="50.00" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 270px; justify-content: start; display: flex; flex-direction: column;" id="containerab96ee6b1e22581770193626246">
+                                      <div class="lookupFormFieldBlock" data-editorblocktype="LookupFormField" data-targetaudience="lead" data-targetproperty="nor_noricansalescategory" data-lookuptargets="[{&quot;LogicalName&quot;:&quot;nor_noricansalescategory&quot;,&quot;PrimarySavedQueryId&quot;:&quot;cb25b2ad-4d90-4778-a2a2-089d25a6c270&quot;,&quot;PrimaryNameAttribute&quot;:&quot;nor_name&quot;,&quot;DefaultValue&quot;:{&quot;id&quot;:&quot;ebc0d3d1-98ef-f011-8406-7ced8d752dba&quot;,&quot;name&quot;:&quot;Aftermarket&quot;},&quot;PrimaryNameAttributeValue&quot;:&quot;Aftermarket&quot;}]" data-required="required" data-prefill="false" data-publicvisibility="true">
+                        <label title="Norican Sales Category" for="665fa8b9-027a-4e70-ae8b-05d160471153">Norican Sales Category</label><input id="665fa8b9-027a-4e70-ae8b-05d160471153" type="text" name="nor_noricansalescategory" placeholder="" title="Norican Sales Category" required="required" list="list-665fa8b9-027a-4e70-ae8b-05d160471153"><datalist id="list-665fa8b9-027a-4e70-ae8b-05d160471153"></datalist>
+                    </div><div class="lookupFormFieldBlock" data-editorblocktype="LookupFormField" data-targetaudience="lead" data-targetproperty="nor_noricansalesprocess" data-lookuptargets="[{&quot;LogicalName&quot;:&quot;nor_noricansalesprocess&quot;,&quot;PrimarySavedQueryId&quot;:&quot;f263052c-8e2c-4196-ab69-dd032d7f6077&quot;,&quot;PrimaryNameAttribute&quot;:&quot;nor_name&quot;,&quot;DefaultValue&quot;:{&quot;id&quot;:&quot;ef0a69f4-a3fd-f011-8407-002248a279b5&quot;,&quot;name&quot;:&quot;Spares &amp; Service | AM | Lead&quot;},&quot;PrimaryNameAttributeValue&quot;:&quot;Spares &amp; Service | AM | Lead&quot;}]" data-required="required" data-prefill="false" data-publicvisibility="true" data-savedfieldid="012a0993-a301-f111-8407-002248a2720a">
+                        <label title="Norican Sales Process" for="d93e22fe-78a8-40aa-a87f-17ebff4a5351">Norican Sales Process</label><input id="d93e22fe-78a8-40aa-a87f-17ebff4a5351" type="text" name="nor_noricansalesprocess" placeholder="" title="Norican Sales Process" required="required" list="list-d93e22fe-78a8-40aa-a87f-17ebff4a5351"><datalist id="list-d93e22fe-78a8-40aa-a87f-17ebff4a5351"></datalist>
+                    </div></div></div>
+            
+            <div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="padding: 10px; display: flex;">
+                <div class="columnContainer" data-container="true" data-container-width="100" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 560px; justify-content: start; display: flex; flex-direction: column;" id="container9d408f677ddcb1770187714167">
+                    <div data-editorblocktype="Divider" style="margin: 20px 10px;"><div class="dividerWrapper" align="center"><table style="padding: 0px; margin: 0px; width: 100%; border-collapse: collapse;" role="presentation" class="" cellpadding="0" cellspacing="0"><tbody><tr style="padding: 0px;"><th style="margin:0px; padding: 0px; vertical-align:top;border-top-width: 2px; border-top-style: solid; border-top-color: #e1dfdd;"><p style="margin: 0px; padding: 0px; line-height: 0px; width: 100%;"><span><!--[if gte mso 9]><br/><![endif]-->&nbsp;</span></p></th></tr></tbody></table></div></div>
+                </div>
+            </div><div data-section="true" class="emptyContainer columns-equal-class wrap-section" style="padding: 10px; display: flex;"><div class="columnContainer" data-container="true" data-container-width="50" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 270px; justify-content: start; display: flex; flex-direction: column;" id="container49b30af934b9581770193690190">
+                                      <div class="textFormFieldBlock" data-editorblocktype="TextAreaFormField" data-targetaudience="lead" data-targetproperty="description" data-prefill="false" data-required="required">
+                        <label title="Description" for="description-1770187757881">Description</label><textarea id="description-1770187757881" name="description" placeholder="" title="Description" cols="20" rows="5" maxlength="2000" value="Description" required="required">Description</textarea>
+                    </div></div><div class="columnContainer" data-container="true" data-container-width="50" style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; width: 270px; justify-content: start; display: flex; flex-direction: column;" id="containerd0fc55616b4a11770193690190">
+                                      <div class="consentBlock" data-editorblocktype="Consent" data-required="true" style="padding: 4px 30px;" data-compliancesettingsid="7f4a6355-1811-4cde-bde3-fee8c85f56b1" data-compliancesettingsname="Norican" data-purposeid="10000000-0000-0000-0000-000000000003" data-channels="Email" data-purposename="Commercial" data-topicid="undefined" data-topicname="undefined" data-optinwhenchecked="true" data-prefill="prefill">
+                        <div>
+                            <input type="checkbox" id="consentCheckbox-1763717246722" name="msdynmkt_purposeid;channels;optinwhenchecked" value="10000000-0000-0000-0000-000000000003;Email;true" required="" checked="">
+                            <label id="consentCheckbox-1763717246722-label" for="consentCheckbox-1763717246722"><p>I agree</p></label>
+                        </div>
+                    </div><div data-editorblocktype="SubmitButton" class="submitButtonWrapper"><button class="submitButton" type="submit">
+        <span>Submit</span></button></div></div></div>
+
+
+            
+            
+
+        </div>
+    </form></body></html>
