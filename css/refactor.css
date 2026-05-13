@@ -1,0 +1,666 @@
+:root {
+  --font-sans: "Segoe UI", Arial, sans-serif;
+  --font-body: Arial, Verdana, sans-serif;
+  --text-900: #000;
+  --text-700: #323130;
+  --text-500: #64738b;
+  --border-default: #808080;
+  --bg-white: #fff;
+  --brand-600: #2266e3;
+  --focus-ring: #007bff;
+  --danger-600: #fb1010;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 10px;
+  --space-4: 12px;
+  --space-5: 16px;
+  --space-6: 20px;
+  --space-7: 22px;
+  --label-offset-y: -27px;
+  --label-padding: 0 10px 0 20px;
+  --trans-fast: 0.2s ease;
+  --trans-normal: 0.4s ease;
+}
+
+@layer reset, base, layout, components, states, integrations, utilities;
+
+@layer reset {
+  .editor-control-layout html {
+    box-sizing: border-box;
+    background-color: var(--bg-white);
+  }
+
+  .editor-control-layout *,
+  .editor-control-layout *::before,
+  .editor-control-layout *::after {
+    box-sizing: inherit;
+  }
+}
+
+@layer base {
+  form.marketingForm {
+    color: var(--text-900);
+    font-family: var(--font-sans);
+    font-size: 14px;
+  }
+
+  .marketingForm h1,
+  .marketingForm h2,
+  .marketingForm h3,
+  .marketingForm p,
+  .marketingForm li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    line-height: 1.25;
+  }
+
+  .marketingForm h1 {
+    font-family: var(--font-sans);
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .marketingForm h2 {
+    color: #333;
+    font-family: var(--font-body);
+    font-size: 22px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .marketingForm h3 {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .marketingForm p,
+  .marketingForm li,
+  .marketingForm a,
+  .marketingForm ul,
+  .marketingForm ol,
+  .subtitle,
+  .requiredSuffix {
+    font-family: var(--font-body);
+    font-size: 14px;
+  }
+
+  .marketingForm p {
+    text-align: center;
+  }
+
+  .marketingForm a {
+    text-decoration: none;
+  }
+
+  .marketingForm ul,
+  .marketingForm ol {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.25;
+    padding-inline-end: 0 !important;
+  }
+
+  .marketingForm p img {
+    max-width: 100%;
+  }
+}
+
+@layer layout {
+  [data-layout="true"] {
+    margin: 0 auto;
+    max-width: 700px;
+    background-color: var(--bg-white);
+  }
+
+  .emptyContainer.columns-equal-class.wrap-section {
+    display: flex;
+  }
+
+  .columnContainer[data-container="true"] {
+    display: flex;
+    flex-direction: column;
+    min-width: 5px;
+    word-wrap: break-word;
+    word-break: break-word;
+    vertical-align: top;
+    justify-content: flex-start;
+    background-color: transparent;
+  }
+
+  .columnContainer[data-container-width="33.33"] {
+    width: 33.33%;
+    flex: 0 0 33.33%;
+  }
+
+  .columnContainer[data-container-width="50.00"] {
+    width: 50%;
+    flex: 0 0 50%;
+    vertical-align: baseline;
+  }
+
+  .columnContainer[data-container-width="50"] {
+    width: 50%;
+    flex: 0 0 50%;
+  }
+
+  .columnContainer[data-container-width="60.00"] {
+    width: 60%;
+    flex: 0 0 60%;
+    vertical-align: middle;
+    justify-content: center;
+  }
+
+  .columnContainer[data-container-width="40.00"] {
+    width: 40%;
+    flex: 0 0 40%;
+    vertical-align: middle;
+    justify-content: center;
+  }
+
+  .columnContainer[data-container-width="100"] {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+@layer components {
+  .marketingForm .primaryButtonWrapper,
+  .submitButtonWrapper {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .marketingForm .primaryButton,
+  .submitButton {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: var(--brand-600);
+    border: none;
+    border-radius: var(--radius-sm);
+    color: var(--bg-white);
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .submitButton--fixed {
+    width: 231px;
+    height: 59px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    line-height: normal;
+    background-color: rgb(0, 16, 72);
+  }
+
+  .marketingForm .secondaryButton {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: var(--bg-white);
+    border: 1px solid #0082dd;
+    border-radius: var(--radius-sm);
+    color: var(--brand-600);
+    padding: 10px 20px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .marketingForm .error,
+  .field-error,
+  .form-field__error {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 8px;
+    margin: 0;
+    padding: 0;
+    color: #a80000;
+  }
+
+  .form-field,
+  .field,
+  .textFormFieldBlock,
+  .dateTimeFormFieldBlock,
+  .optionSetFormFieldBlock,
+  .lookupFormFieldBlock,
+  .twoOptionFormFieldBlock,
+  .multiOptionSetFormFieldBlock,
+  .passesBlock,
+  .phoneFormFieldBlock {
+    padding: var(--space-3);
+    display: flex;
+    flex-direction: column;
+  }
+
+  table.multi .form-field,
+  table.multi .textFormFieldBlock,
+  table.multi .dateTimeFormFieldBlock,
+  table.multi .optionSetFormFieldBlock,
+  table.multi .lookupFormFieldBlock,
+  table.multi .twoOptionFormFieldBlock,
+  table.multi .multiOptionSetFormFieldBlock,
+  table.multi .passesBlock,
+  table.multi .phoneFormFieldBlock {
+    padding: var(--space-4) var(--space-6);
+  }
+
+  .form-field__label,
+  .field-label,
+  .textFormFieldBlock > label,
+  .phoneFormFieldBlock > label,
+  .dateTimeFormFieldBlock > label,
+  .lookupFormFieldBlock > label,
+  .optionSetFormFieldBlock > label.block-label,
+  .twoOptionFormFieldBlock > label.block-label,
+  .multiOptionSetFormFieldBlock > label.block-label,
+  .passesBlock > label,
+  div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"] {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-700);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    margin-bottom: -23px;
+    z-index: 1;
+    position: relative;
+    padding: var(--label-padding);
+    pointer-events: none;
+  }
+
+  .form-field__control,
+  .field-control,
+  .textFormFieldBlock input,
+  .textFormFieldBlock textarea,
+  .dateTimeFormFieldBlock input,
+  .lookupFormFieldBlock input,
+  .optionSetFormFieldBlock select,
+  .passesBlock select,
+  .marketingForm textarea,
+  div[data-editorblocktype="Captcha"] input {
+    font-family: var(--font-body);
+    font-size: 14px;
+    padding: var(--space-7) var(--space-6);
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    color: var(--text-900);
+    display: block;
+        min-height: 70px;
+
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    flex: 2 1 20%;
+  }
+
+  .textFormFieldBlock textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .textFormFieldBlock input::placeholder,
+  .textFormFieldBlock textarea::placeholder,
+  .dateTimeFormFieldBlock input::placeholder,
+  .lookupFormFieldBlock input::placeholder,
+  .optionSetFormFieldBlock select,
+  .passesBlock select,
+  .marketingForm textarea::placeholder,
+  div[data-editorblocktype="Captcha"] input::placeholder {
+    color: inherit;
+  }
+
+  .lookupFormFieldBlock input {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiPjxwYXRoIGQ9Ik0xMzQ0IDBxOTcgMCAxODcgMjV0MTY4IDcxIDE0MiAxMTAgMTExIDE0MyA3MSAxNjggMjUgMTg3cTAgOTctMjUgMTg3dC03MSAxNjgtMTEwIDE0Mi0xNDMgMTExLTE2OCA3MS0xODcgMjVxLTEyNSAwLTIzOS00MnQtMjExLTEyMWwtNzg1IDc4NHEtMTkgMTktNDUgMTl0LTQ1LTE5LTE5LTQ1cTAtMjYgMTktNDVsNzg0LTc4NXEtNzktOTYtMTIxLTIxMHQtNDItMjQwcTAtOTcgMjUtMTg3dDcxLTE2OCAxMTAtMTQyVDk4OSA5NnQxNjgtNzEgMTg3LTI1em0wIDEyODBxMTE5IDAgMjI0LTQ1dDE4My0xMjQgMTIzLTE4MyA0Ni0yMjRxMC0xMTktNDUtMjI0dC0xMjQtMTgzLTE4My0xMjMtMjI0LTQ2cS0xMTkgMC0yMjQgNDVUOTM3IDI5NyA4MTQgNDgwdC00NiAyMjRxMCAxMTkgNDUgMjI0dDEyNCAxODMgMTgzIDEyMyAyMjQgNDZ6Ii8+PC9zdmc+");
+    background-repeat: no-repeat;
+    background-position: 98% center;
+    background-size: 1em 1em;
+  }
+
+  .lookupFormFieldBlock input:dir(rtl) {
+    background-position-x: 2%;
+  }
+
+  .optionSetFormFieldBlock select,
+  .passesBlock select {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDEyIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02IDYuNzA4OThMMC4xNDY0ODQgMC44NTU0NjlMMC44NTU0NjkgMC4xNDY0ODRMNiA1LjI5MTAyTDExLjE0NDUgMC4xNDY0ODRMMTEuODUzNSAwLjg1NTQ2OUw2IDYuNzA4OThaIiBmaWxsPSIjNjA1RTVDIi8+Cjwvc3ZnPgo=");
+    background-repeat: no-repeat;
+    background-position: 98% center;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .twoOptionFormFieldBlock div.radiobuttons,
+  .twoOptionFormFieldBlock div.twooption_checkbox,
+  .optionSetFormFieldBlock div.radiobuttons,
+  .multiOptionSetFormFieldBlock fieldset {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: var(--space-2);
+    flex: 2 1 0%;
+    margin: 0;
+    border-radius: 1px;
+    background-color: transparent;
+  }
+
+  .multiOptionSetFormFieldBlock fieldset {
+    margin-top: 14px;
+  }
+
+  .twoOptionFormFieldBlock div.radiobuttons > div,
+  .twoOptionFormFieldBlock div.twooption_checkbox > div,
+  .optionSetFormFieldBlock div.radiobuttons > div,
+  .multiOptionSetFormFieldBlock fieldset > div,
+  .consentBlock > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: var(--space-2);
+  }
+
+  .twoOptionFormFieldBlock div.radiobuttons div input,
+  .twoOptionFormFieldBlock div.twooption_checkbox div input,
+  .optionSetFormFieldBlock div.radiobuttons div input,
+  .multiOptionSetFormFieldBlock fieldset > div > input[type="checkbox"],
+  .eventSession > div > input[type="checkbox"],
+  .eventSession > div > input[type="radio"],
+  .consentBlock div input {
+    margin: 0;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--text-700);
+    border-radius: 2px;
+    accent-color: #0078d4;
+    flex-shrink: 0;
+  }
+
+  .phoneFormFieldBlock .phoneCountryCode {
+    display: flex;
+    flex: 2 1 20%;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    justify-content: center;
+    background-color: transparent;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  .phoneFormFieldBlock .phoneCountryCodeLabel {
+    overflow: hidden;
+    margin: 0;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+    opacity: 1;
+    text-align: center;
+    color: var(--text-900);
+    background-color: var(--bg-white);
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    font-family: var(--font-body);
+    font-size: 14px;
+  }
+
+  .phoneFormFieldBlock span[hidden] {
+    display: none;
+  }
+
+  .phoneFormFieldBlock input {
+    font-family: var(--font-body);
+    padding: 18px 20px;
+    background-color: var(--bg-white);
+    display: block;
+    width: 100%;
+    border-radius: var(--radius-md);
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    flex: 2 1 0%;
+    border: none;
+    color: var(--text-900);
+  }
+
+  .form-accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    transition: background-color var(--trans-normal);
+  }
+
+  .form-accordion::after {
+    content: "+";
+    color: #777;
+    font-weight: 700;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .form-panel {
+    padding: 0 18px;
+    background-color: var(--bg-white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--trans-fast);
+  }
+
+  .notification-message,
+  .form-notice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 38px;
+    border: 1.44737px solid #ccc;
+    border-radius: var(--radius-lg);
+    margin: 10px;
+  }
+
+  .notification-message-hide {
+    display: none;
+  }
+
+  .legalNoticeText {
+    line-height: 22px;
+    color: rgb(148, 162, 184);
+    font-size: 14px;
+  }
+}
+
+@layer states {
+  .form-accordion.is-active,
+  .form-accordion:hover {
+    background-color: #ccc;
+  }
+
+  .form-accordion.is-active::after {
+    content: "\2212";
+  }
+
+  .is-invalid input,
+  .is-invalid textarea,
+  .is-invalid select,
+  .field-invalid input,
+  .field-invalid textarea,
+  .field-invalid select,
+  .phoneFormFieldBlock.field-invalid .phoneCountryCode {
+    border-color: var(--danger-600) !important;
+    border-width: 2px !important;
+  }
+
+  .marketingForm input:focus,
+  .marketingForm textarea:focus,
+  .marketingForm select:focus,
+  .phoneFormFieldBlock .phoneCountryCode:focus-within,
+  .is-focused {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--focus-ring);
+  }
+
+  .textFormFieldBlock label::after,
+  .phoneFormFieldBlock label::after,
+  .twooption_checkbox label::after,
+  .dateTimeFormFieldBlock label::after,
+  .lookupFormFieldBlock label::after,
+  .twoOptionFormFieldBlock label.block-label::after,
+  .twoOptionFormFieldBlock div.twooption_checkbox label::after,
+  .optionSetFormFieldBlock label.block-label::after,
+  .passesBlock label.block-label::after,
+  .multiOptionSetFormFieldBlock label.block-label::after,
+  .consentBlock label::after,
+  .eventSession label::after,
+  div[data-editorblocktype="Sessions"] h2::after,
+  div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"]::after {
+    width: 22px;
+    display: inline-block;
+    line-height: 22px;
+    text-align: center;
+    color: var(--bg-white);
+    content: "*";
+    visibility: hidden;
+    margin-bottom: -23px;
+    z-index: 1;
+    position: relative;
+    padding: var(--label-padding);
+    pointer-events: none;
+  }
+
+  .is-required .field-label::after,
+  div[data-required].textFormFieldBlock label::after,
+  div[data-required].phoneFormFieldBlock label::after,
+  div[data-required].dateTimeFormFieldBlock label::after,
+  div[data-required].lookupFormFieldBlock label::after,
+  div[data-required] div.twooption_checkbox label::after,
+  div[data-required] label.block-label::after,
+  div[data-required="true"].consentBlock label::after,
+  div[data-editorblocktype="Sessions"][data-required="true" i] h2::after,
+  div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"]::after,
+  .eventSessions div.eventSession div input[type="checkbox"]:checked + label::after,
+  .eventSessions div.eventSession div input[type="radio"]:checked + label::after {
+    visibility: visible;
+  }
+}
+
+@layer integrations {
+  .onFormSubmittedFeedbackIcon {
+    content: url("https://assets-usa.mkt.dynamics.com/baeb84e1-fe9e-480f-aba6-3d8de7fca5f4/digitalassets/images/b3273cb9-37fc-ed11-8849-002248218d67");
+    height: auto !important;
+  }
+
+  div[data-editorblocktype="SubmitButton"] {
+    padding: 20px 0;
+  }
+
+  div[data-editorblocktype="Captcha"] {
+    padding: 20px 12%;
+  }
+
+  div[data-editorblocktype="Captcha"] table,
+  div[data-editorblocktype="Captcha"] div > table > tbody > tr > td:nth-of-type(2) {
+    width: 100% !important;
+  }
+
+  .consentBlock {
+    padding: 4px 30px;
+  }
+}
+
+@layer utilities {
+  .u-p-10 {
+    padding: 10px;
+  }
+
+  .u-py-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .u-pt-10 {
+    padding-top: 10px;
+  }
+
+  .u-pr-10 {
+    padding-right: 10px;
+  }
+
+  .u-mt-10 {
+    margin-top: 10px;
+  }
+
+  .u-mb-20 {
+    margin-bottom: 20px;
+  }
+
+  .u-m-0 {
+    margin: 0;
+  }
+
+  .u-text-left {
+    text-align: left;
+  }
+
+  .u-fs-18 {
+    font-size: 18px;
+  }
+
+  .u-va-baseline {
+    vertical-align: baseline;
+  }
+
+  .u-va-middle {
+    vertical-align: middle;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .emptyContainer.columns-equal-class.wrap-section {
+    flex-wrap: wrap;
+  }
+
+  .emptyContainer.columns-equal-class.wrap-section > .columnContainer[data-container="true"] {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  .marketingForm a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+}
