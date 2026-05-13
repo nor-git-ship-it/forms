@@ -122,11 +122,6 @@ const APP_CONFIG = {
         names: ['utm', 'crm_utm'],
         ids: [],
         titles: ['UTM', 'UTM Params', 'UTM Parameters']
-      },
-      subject: {
-        names: ['subject'],
-        ids: [],
-        titles: ['Subject']
       }
     }
   }
@@ -2884,6 +2879,7 @@ async function startIpScript() {
   await bindFormProfilePersistenceWithRetry({ retryMs: 500, maxAttempts: 2 });
   await bindEmailToWebsiteSyncWithRetry({ retryMs: 500, maxAttempts: 2 });
   await bindWebsiteMetadataListenersWithRetry({ retryMs: 500, maxAttempts: 2 });
+  await bindTopicAutoFillWithRetry({ retryMs: 500, maxAttempts: 5 });
 
   console.log('[Form JS IP] Stored formatted IP data for Marketing Form injection.');
   logSuccess('Done: IP data successfully captured.');
