@@ -45,8 +45,8 @@ const APP_CONFIG = {
     websiteInfoFieldById: 'longtext4893-1771565754879',
     insightsFieldByTitle: 'textarea[title="Insights"], input[title="Insights"]',
     insightsFieldByName: 'textarea[name="Insights"], input[name="Insights"]',
-    languageFieldByName: 'input[name="nor_primarylanguage"], select[name="nor_primarylanguage"]',
-    languageFieldById: 'fc83727d-ad24-4e7b-a71e-eb1ea6e11185',
+    languageFieldByName: 'input[name="Language"], select[name="Language"], input[name="nor_primarylanguage"], select[name="nor_primarylanguage"]',
+    languageFieldById: '',
     fieldSchema: {
       firstName: {
         names: ['firstname'],
@@ -114,7 +114,7 @@ const APP_CONFIG = {
         titles: ['Source Campaign']
       },
       language: {
-        names: ['nor_primarylanguage'],
+        names: ['Language', 'nor_primarylanguage'],
         ids: ['fc83727d-ad24-4e7b-a71e-eb1ea6e11185'],
         titles: ['Language']
       },
@@ -2584,7 +2584,9 @@ async function fillCountryLookup(countryName) {
 function getLanguageField() {
   const bySchema = getFieldFromSchema('language');
   const byName = document.querySelector(APP_CONFIG.selectors.languageFieldByName);
-  const byId = document.getElementById(APP_CONFIG.selectors.languageFieldById);
+  const byId = APP_CONFIG.selectors.languageFieldById
+    ? document.getElementById(APP_CONFIG.selectors.languageFieldById)
+    : null;
   const byLabel = getFieldByLabelText('Language');
 
   const field = bySchema || byName || byId || byLabel || null;
