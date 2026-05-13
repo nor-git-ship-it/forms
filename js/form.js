@@ -2872,12 +2872,12 @@ async function startIpScript() {
   logSuccess('Stored formatted payload on window.__IP_CAPTURED__.');
   await setIpFieldWithRetry(formatted, { retryMs: 500, maxAttempts: 2 });
   await fillCountryLookup(data?.countryName);
-  await fillLanguageFromBrowser({ retryMs: 500, maxAttempts: 2 });
+  await fillLanguageFromBrowser({ retryMs: 500, maxAttempts: 10 });
   await populateUtmFieldWithRetry({ retryMs: 500, maxAttempts: 2 });
   await populateCampaignLookupFieldWithRetry({ retryMs: 500, maxAttempts: 2 });
   await bindFormProfilePersistenceWithRetry({ retryMs: 500, maxAttempts: 2 });
-  await bindEmailToWebsiteSyncWithRetry({ retryMs: 500, maxAttempts: 2 });
-  await bindWebsiteMetadataListenersWithRetry({ retryMs: 500, maxAttempts: 2 });
+  await bindEmailToWebsiteSyncWithRetry({ retryMs: 500, maxAttempts: 10 });
+  await bindWebsiteMetadataListenersWithRetry({ retryMs: 500, maxAttempts: 10 });
 
   console.log('[Form JS IP] Stored formatted IP data for Marketing Form injection.');
   logSuccess('Done: IP data successfully captured.');
