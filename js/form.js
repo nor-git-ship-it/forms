@@ -46,7 +46,6 @@ const APP_CONFIG = {
     insightsFieldByTitle: 'textarea[title="Insights"], input[title="Insights"]',
     insightsFieldByName: 'textarea[name="Insights"], input[name="Insights"]',
     languageFieldByName: 'input[name="Language"], select[name="Language"], input[name="nor_primarylanguage"], select[name="nor_primarylanguage"]',
-    languageFieldById: 'fc83727d-ad24-4e7b-a71e-eb1ea6e11185',
     fieldSchema: {
       firstName: {
         names: ['firstname'],
