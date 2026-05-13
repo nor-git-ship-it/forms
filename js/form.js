@@ -116,7 +116,7 @@ const APP_CONFIG = {
       language: {
         names: ['nor_primarylanguage'],
         ids: ['fc83727d-ad24-4e7b-a71e-eb1ea6e11185'],
-        titles: ['Language', 'Field label']
+        titles: ['Language']
       },
       utm: {
         names: ['utm', 'crm_utm'],
