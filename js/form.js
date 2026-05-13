@@ -844,7 +844,6 @@ const UI_TRANSLATION_RESOURCES = {
         website: 'Website',
         companyName: 'Company name',
         jobTitle: 'Job title',
-        language: 'Language',
         country: 'Country',
         industry: 'Industry',
         inquiry: 'Inquiry',
@@ -868,8 +867,6 @@ const UI_TRANSLATION_RESOURCES = {
         country: 'Choose your Country',
         industry: 'Select your Industry',
         inquiry: 'Describe your Inquiry',
-     
-    
       },
       hints: {
         email: '',
@@ -2585,13 +2582,17 @@ async function fillCountryLookup(countryName) {
   ========================= */
 // Finds the Language select field in the form.
 function getLanguageField() {
-  const bySchema = getFieldFromSchema('Language');
+  const bySchema = getFieldFromSchema('language');
   const byName = document.querySelector(APP_CONFIG.selectors.languageFieldByName);
   const byId = document.getElementById(APP_CONFIG.selectors.languageFieldById);
   const byLabel = getFieldByLabelText('Language');
 
   const field = bySchema || byName || byId || byLabel || null;
-  if (field && field.tagName !== 'SELECT') {
+  if (!field) {
+    return null;
+  }
+
+  if (!field.matches('select, input, textarea')) {
     return null;
   }
 
@@ -2606,18 +2607,25 @@ function setLanguageFieldValue(lcidValue) {
     return false;
   }
 
-  const optionExists = Array.from(field.options || []).some((option) => option.value === lcidValue);
-  if (!optionExists) {
-    logWarn('Language LCID option not found in field options.', { lcidValue });
-    return false;
+  if (field.tagName === 'SELECT') {
+    const optionExists = Array.from(field.options || []).some((option) => option.value === lcidValue);
+    if (!optionExists) {
+      logWarn('Language LCID option not found in field options.', { lcidValue });
+      return false;
+    }
+
+    field.value = lcidValue;
+    dispatchChangeEvents(field);
+    logSuccess('Language field updated.', {
+      lcidValue,
+      selectedText: field.options[field.selectedIndex]?.text || null
+    });
+    return true;
   }
 
   field.value = lcidValue;
   dispatchChangeEvents(field);
-  logSuccess('Language field updated.', {
-    lcidValue,
-    selectedText: field.options[field.selectedIndex]?.text || null
-  });
+  logSuccess('Language input field updated.', { lcidValue });
   return true;
 }
 
