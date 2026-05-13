@@ -115,7 +115,7 @@ const APP_CONFIG = {
       },
       language: {
         names: ['mspp_userpreferredlcid', 'Language'],
-        ids: ['mspp_userpreferredlcid-1771569555060'],
+        ids: ['fc83727d-ad24-4e7b-a71e-eb1ea6e11185'],
         titles: ['Language', 'Field label']
       },
       utm: {
