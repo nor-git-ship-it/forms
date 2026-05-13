@@ -2585,7 +2585,7 @@ async function fillCountryLookup(countryName) {
   ========================= */
 // Finds the Language select field in the form.
 function getLanguageField() {
-  const bySchema = getFieldFromSchema('language');
+  const bySchema = getFieldFromSchema('Language');
   const byName = document.querySelector(APP_CONFIG.selectors.languageFieldByName);
   const byId = document.getElementById(APP_CONFIG.selectors.languageFieldById);
   const byLabel = getFieldByLabelText('Language');
