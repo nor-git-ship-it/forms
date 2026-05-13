@@ -2863,14 +2863,14 @@ async function startIpScript() {
   const formatted = formatIpData(data);
   window.__IP_CAPTURED__ = formatted;
   logSuccess('Stored formatted payload on window.__IP_CAPTURED__.');
-  await setIpFieldWithRetry(formatted, { retryMs: 500, maxAttempts: 10 });
+  await setIpFieldWithRetry(formatted, { retryMs: 500, maxAttempts: 2 });
   await fillCountryLookup(data?.countryName);
-  await fillLanguageFromBrowser({ retryMs: 500, maxAttempts: 10 });
-  await populateUtmFieldWithRetry({ retryMs: 500, maxAttempts: 10 });
-  await populateCampaignLookupFieldWithRetry({ retryMs: 500, maxAttempts: 10 });
-  await bindFormProfilePersistenceWithRetry({ retryMs: 500, maxAttempts: 10 });
-  await bindEmailToWebsiteSyncWithRetry({ retryMs: 500, maxAttempts: 10 });
-  await bindWebsiteMetadataListenersWithRetry({ retryMs: 500, maxAttempts: 10 });
+  await fillLanguageFromBrowser({ retryMs: 500, maxAttempts: 2 });
+  await populateUtmFieldWithRetry({ retryMs: 500, maxAttempts: 2 });
+  await populateCampaignLookupFieldWithRetry({ retryMs: 500, maxAttempts: 2 });
+  await bindFormProfilePersistenceWithRetry({ retryMs: 500, maxAttempts: 2 });
+  await bindEmailToWebsiteSyncWithRetry({ retryMs: 500, maxAttempts: 2 });
+  await bindWebsiteMetadataListenersWithRetry({ retryMs: 500, maxAttempts: 2 });
 
   console.log('[Form JS IP] Stored formatted IP data for Marketing Form injection.');
   logSuccess('Done: IP data successfully captured.');
