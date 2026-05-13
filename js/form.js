@@ -45,7 +45,8 @@ const APP_CONFIG = {
     websiteInfoFieldById: 'longtext4893-1771565754879',
     insightsFieldByTitle: 'textarea[title="Insights"], input[title="Insights"]',
     insightsFieldByName: 'textarea[name="Insights"], input[name="Insights"]',
-    languageFieldByName: 'input[name="Language"], select[name="Language"], input[name="nor_primarylanguage"], select[name="nor_primarylanguage"]',
+    languageFieldByName: 'input[name="nor_primarylanguage"], select[name="nor_primarylanguage"]',
+    languageFieldById: 'fc83727d-ad24-4e7b-a71e-eb1ea6e11185',
     fieldSchema: {
       firstName: {
         names: ['firstname'],
@@ -121,6 +122,11 @@ const APP_CONFIG = {
         names: ['utm', 'crm_utm'],
         ids: [],
         titles: ['UTM', 'UTM Params', 'UTM Parameters']
+      },
+      subject: {
+        names: ['subject'],
+        ids: [],
+        titles: ['Subject']
       }
     }
   }
@@ -2872,12 +2878,12 @@ async function startIpScript() {
   logSuccess('Stored formatted payload on window.__IP_CAPTURED__.');
   await setIpFieldWithRetry(formatted, { retryMs: 500, maxAttempts: 2 });
   await fillCountryLookup(data?.countryName);
-  await fillLanguageFromBrowser({ retryMs: 500, maxAttempts: 10 });
+  await fillLanguageFromBrowser({ retryMs: 500, maxAttempts: 2 });
   await populateUtmFieldWithRetry({ retryMs: 500, maxAttempts: 2 });
   await populateCampaignLookupFieldWithRetry({ retryMs: 500, maxAttempts: 2 });
   await bindFormProfilePersistenceWithRetry({ retryMs: 500, maxAttempts: 2 });
-  await bindEmailToWebsiteSyncWithRetry({ retryMs: 500, maxAttempts: 10 });
-  await bindWebsiteMetadataListenersWithRetry({ retryMs: 500, maxAttempts: 10 });
+  await bindEmailToWebsiteSyncWithRetry({ retryMs: 500, maxAttempts: 2 });
+  await bindWebsiteMetadataListenersWithRetry({ retryMs: 500, maxAttempts: 2 });
 
   console.log('[Form JS IP] Stored formatted IP data for Marketing Form injection.');
   logSuccess('Done: IP data successfully captured.');
