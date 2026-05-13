@@ -45,8 +45,8 @@ const APP_CONFIG = {
     websiteInfoFieldById: 'longtext4893-1771565754879',
     insightsFieldByTitle: 'textarea[title="Insights"], input[title="Insights"]',
     insightsFieldByName: 'textarea[name="Insights"], input[name="Insights"]',
-    languageFieldByName: 'select[name="mspp_userpreferredlcid"]',
-    languageFieldById: 'mspp_userpreferredlcid-1771569555060',
+    languageFieldByName: 'select[name="Language"]',
+    languageFieldById: 'fc83727d-ad24-4e7b-a71e-eb1ea6e11185',
     fieldSchema: {
       firstName: {
         names: ['firstname'],
@@ -114,7 +114,7 @@ const APP_CONFIG = {
         titles: ['Source Campaign']
       },
       language: {
-        names: ['mspp_userpreferredlcid', 'Language'],
+        names: ['Language'],
         ids: ['fc83727d-ad24-4e7b-a71e-eb1ea6e11185'],
         titles: ['Language', 'Field label']
       },
