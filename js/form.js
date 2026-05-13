@@ -65,12 +65,12 @@ const APP_CONFIG = {
       },
       website: {
         names: ['websiteurl'],
-        ids: ['websiteurl-1771565727350'],
+        ids: ['websiteurl-1772578629727'],
         titles: ['Website']
       },
       websiteInfo: {
         names: ['Website Info'],
-        ids: ['longtext4893-1771565754879'],
+        ids: ['longtext663-1772578715324'],
         titles: ['Website Info']
       },
       insights: {
