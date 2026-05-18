@@ -355,6 +355,8 @@ function setMtmStatus(status, details = {}) {
 }
 
 function updateStatusChip(key) {
+  // IP language panel code disabled.
+  /*
   const panel = document.getElementById('ip-language-panel');
   if (!panel) {
     return;
@@ -370,13 +372,17 @@ function updateStatusChip(key) {
   chip.style.background = status === 'Error' ? '#991b1b' : '#14532d';
   chip.style.borderColor = status === 'Error' ? '#ef4444' : '#22c55e';
   chip.style.color = '#ffffff';
+  */
 }
 
 function updateAllStatusChips() {
+  // IP language panel code disabled.
+  /*
   updateStatusChip(STATUS_KEYS.ip);
   updateStatusChip(STATUS_KEYS.mtm);
   updateStatusChip(STATUS_KEYS.language);
   updateStatusChip(STATUS_KEYS.country);
+  */
 }
 
 
@@ -1348,6 +1354,8 @@ function getScriptSourceMode() {
 }
 
 function updateScriptSourceChip() {
+  // IP language panel code disabled.
+  /*
   const panel = document.getElementById('ip-language-panel');
   if (!panel) {
     return;
@@ -1363,9 +1371,12 @@ function updateScriptSourceChip() {
   chip.style.background = mode === 'remote' ? '#14532d' : mode === 'local' ? '#1f2937' : '#7f1d1d';
   chip.style.borderColor = mode === 'remote' ? '#22c55e' : mode === 'local' ? '#4b5563' : '#ef4444';
   chip.style.color = '#ffffff';
+  */
 }
 
 function isPanelEnabled() {
+  // IP language panel code disabled.
+  /*
   const raw = window.__IP_PANEL_ENABLED__;
   if (raw === false || raw === 0) {
     return false;
@@ -1379,9 +1390,13 @@ function isPanelEnabled() {
   }
 
   return true;
+  */
+  return false;
 }
 
 function ensureLanguagePanel() {
+  // IP language panel code disabled.
+  /*
   if (!isPanelEnabled()) {
     const existingPanel = document.getElementById('ip-language-panel');
     if (existingPanel) {
@@ -1648,6 +1663,7 @@ function ensureLanguagePanel() {
   updateScriptSourceChip();
   updateAllStatusChips();
   logInfo('Floating language panel mounted.');
+  */
 }
 
 async function initializeUiTranslations() {
