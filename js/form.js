@@ -846,7 +846,7 @@ const UI_TRANSLATION_RESOURCES = {
         jobTitle: 'Job title',
         country: 'Country',
         industry: 'Industry',
-        inquiry: 'Anquiry',
+        inquiry: 'Inquiry',
       },
       placeholders: {
         firstName: 'John',
